@@ -1,0 +1,6 @@
+@import "../../app/globals/variables.scss";
+@import "../../app/globals/mixins.scss";
+
+.Button {
+    @include cta-button;
+}

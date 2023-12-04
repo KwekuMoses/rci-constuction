@@ -1,0 +1,12 @@
+@import "../../app/globals/variables.scss";
+
+.Header {
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    justify-content: space-around;
+    background-color: $grey;
+    height: 100px;
+
+
+}

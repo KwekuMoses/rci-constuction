@@ -1,0 +1,28 @@
+@import '../../../app/globals/variables.scss';
+
+.HeroText {
+    position: relative;
+    z-index: 99;
+
+    &__Title {
+            margin: 0;
+            padding: 0;
+            color: $orange;
+            font-size: 12rem;
+    }
+
+    &__Paragraph {
+            margin: 0;
+            padding: 0;
+            color:$white;
+            font-size: 1.8rem;
+    }
+
+    &__Subtitle {
+            margin: 0;
+            padding: 0;
+            color:$white;
+            font-size: 5.5rem;
+        }
+   
+}

@@ -1,0 +1,16 @@
+.NavigationItems {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    &__Link {
+        text-decoration: none; /* Removes underline */
+        color:black;
+        margin: 0 15px;
+        height: max-content;
+
+        &.active {
+            font-weight: bold; // This will make the text bold
+        }
+
+    }
+}
