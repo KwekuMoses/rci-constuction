@@ -13,14 +13,14 @@ interface PagesData {
 }
 
 interface FetchContentReturn {
-    pagesData: PagesData[];
+    pagesData: PagesData | null; 
     isLoading: boolean;
 }
-const pageContentCache = new SimpleCache<PagesData[]>();
+const pageContentCache = new SimpleCache<PagesData>();
 
 const useFetchPageContent = (pageId?: number): FetchContentReturn => {
     const cacheKey = pageId ? `page-${pageId}` : 'all-pages';
-    const [pagesData, setPageContent] = useState<PagesData[]>([]);
+    const [pagesData, setPageContent] = useState<PagesData | null>(null); 
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
@@ -45,7 +45,7 @@ const useFetchPageContent = (pageId?: number): FetchContentReturn => {
         };
 
         fetchData();
-    }, [pageId]); // Adding pageId as a dependency
+    }, [pageId]); 
 
     return { pagesData, isLoading };
 };

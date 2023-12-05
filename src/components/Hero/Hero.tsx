@@ -18,10 +18,12 @@ const Hero = () => {
     const homePageId = 11
     const { pagesData, isLoading } = useFetchPageContent(homePageId);
     const { heroHeight, headerHeight } = useDynamicHeroHeight('#Header');
-
     if (isLoading || !pagesData || !pagesData.content) {
         return <div>Loading...</div>;
     }
+
+    console.log(Array.isArray(pagesData))
+
     const imageUrl = pagesData ? extractImageUrl(pagesData.content.rendered) : null;
 
     return (

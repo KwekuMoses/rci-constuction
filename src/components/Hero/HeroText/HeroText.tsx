@@ -14,7 +14,6 @@ interface HeroTextProps {
 }
 
 const HeroText: React.FC<HeroTextProps> = ({ pagesData }) => {
-    console.log(pagesData.content)
     const { h1Content, pContent, h2Content } = parseHtmlContent(pagesData.content.rendered);
 
     return (
