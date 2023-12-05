@@ -1,10 +1,10 @@
 import React from 'react'
-import NavigationItems from '../../NavigationItems/NavigationItem'
+import NavigationLinks from '../../NavigationLinks/NavigationLinks'
 
 const DesktopNavigation = () => {
     return (
         <>
-            <NavigationItems />
+            <NavigationLinks />
         </>
     )
 }

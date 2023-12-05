@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React, from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import './NavigationItems.scss';
+import './NavigationLinks.scss';
 import { isActiveLink } from '@/Utils/routeHelpers';
 import useFetchPageContent from '@/Hooks/useFetchPageContent';
 
