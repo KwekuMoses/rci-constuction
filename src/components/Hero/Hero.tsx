@@ -27,7 +27,9 @@ const Hero = () => {
 
     return (
         <div className={`Hero ${poppins.className}`} style={{ height: heroHeight }}>
-            {pagesData && <HeroText pagesData={pageContent} />}
+            <div className="Hero__TextWrapper">
+                {pagesData && <HeroText pagesData={pageContent} />}
+            </div>
             {imageUrl && (
                 <Image
                     src={imageUrl}

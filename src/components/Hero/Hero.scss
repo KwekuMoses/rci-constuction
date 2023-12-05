@@ -5,6 +5,12 @@
     height: 100vh;
     position: relative;
     margin-top: $headerHeight;
+    display: grid;
+    place-content: center;
+
+    &__TextWrapper {
+        margin-bottom: 300px;
+    }
 
     &__Overlay {
         position: absolute;
