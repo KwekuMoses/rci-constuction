@@ -17,7 +17,7 @@ import { extractImageUrl } from '@/Utils/extractImageUrl';
 const Hero = () => {
     const homePageId = 11
     const { pagesData, isLoading } = useFetchPageContent(homePageId);
-    const heroHeight = useDynamicHeroHeight('#Header');
+    const { heroHeight, headerHeight } = useDynamicHeroHeight('#Header');
 
     if (isLoading) {
         return <div>Loading...</div>;
@@ -25,7 +25,7 @@ const Hero = () => {
     const imageUrl = pagesData ? extractImageUrl(pagesData.content.rendered) : null;
 
     return (
-        <div className={`Hero ${poppins.className}`} style={{ height: heroHeight }}>
+        <div className={`Hero ${poppins.className}`} style={{ height: heroHeight, marginTop: headerHeight }}>
             {pagesData && <HeroText pagesData={pagesData} />}
             {imageUrl && (
                 <Image
