@@ -23,7 +23,7 @@ export const fetchMenu = async () => {
         }
 
         return await response.json();
-    } catch (error) {
+    } catch (error: any) {
         console.error('Failed to fetch menu:', error.message);
         return [];
     }
