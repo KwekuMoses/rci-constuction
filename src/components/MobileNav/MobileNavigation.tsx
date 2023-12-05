@@ -21,8 +21,7 @@ const MobileNavigation = () => {
 
         <div className="MobileNavigation">
             <div className={`MobileNavigation__Burger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-                <div className="BurgerLine">
-                </div>
+                <div className="BurgerLine"></div>
                 <div className="BurgerLine"></div>
                 <div className="BurgerLine"></div>
             </div>

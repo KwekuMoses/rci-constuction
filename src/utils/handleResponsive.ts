@@ -1,3 +1,3 @@
-export const isMobileScreen = (width) => {
-    return width < 768; // Or any other threshold for mobile
+export const isMobileScreen = (width: number) => {
+    return width < 768;
 };
