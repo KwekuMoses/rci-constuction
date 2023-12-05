@@ -1,0 +1,51 @@
+.MobileNavigation {
+	&__Burger {
+		cursor: pointer;
+		padding: 12px;
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		z-index: 101;
+
+		cursor: pointer;
+		width: 30px;
+		height: 25px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+
+		.BurgerLine {
+			background-color: #333;
+			height: 3px;
+			width: 100%;
+			transition: all 0.3s ease;
+		}
+
+	}
+
+	&__MobileMenu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: white; 
+		box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+		z-index: 100;
+	}
+}
+
+
+.MobileNavigation__Burger.open .BurgerLine:nth-child(1) {
+    transform: translateY(10px) rotate(0deg);
+}
+
+.MobileNavigation__Burger.open .BurgerLine:nth-child(2) {
+    opacity: 0;
+}
+
+.MobileNavigation__Burger.open .BurgerLine:nth-child(3) {
+    transform: translateY(-5px) rotate(-0deg);
+	opacity: 0;
+}
