@@ -7,7 +7,15 @@ export const poppins = Poppins({
     subsets: ['latin'],
 })
 
-export const dm_sans = DM_Sans({
+export const dm_sans_bold = DM_Sans({
+    weight: '900',
+    subsets: ['latin'],
+})
+export const dm_sans_thin = DM_Sans({
+    weight: '300',
+    subsets: ['latin'],
+})
+export const dm_sans_buttons = DM_Sans({
     weight: '500',
     subsets: ['latin'],
 })
