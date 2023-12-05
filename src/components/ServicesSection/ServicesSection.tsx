@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from '../Title/Title'
-import Button from '../Button/Button'
+import Button from '../CtaButton/CtaButton'
 
 const ServicesSection = () => {
     return (

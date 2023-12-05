@@ -1,19 +1,17 @@
 'use client'
 
 import React from 'react'
-import './Button.scss'
-
+import './CtaButton.scss'
 
 interface Props {
     onClick?: () => void;
 }
 
-
-const Button = ({ onClick }: Props) => {
+const CtaButton = ({ onClick }: Props) => {
 
     return (
         <button className="Button">Boka konsultation</button>
     )
 }
 
-export default Button
+export default CtaButton

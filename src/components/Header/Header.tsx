@@ -2,7 +2,7 @@
 import React from 'react';
 import './Header.scss';
 import Navigation from '../Navigation/Navigation';
-import Button from '../Button/Button';
+import Button from '../CtaButton/CtaButton';
 import Logo from '../Logo/Logo';
 
 import { useWindowSize } from '@/Hooks/useWindowSize';
