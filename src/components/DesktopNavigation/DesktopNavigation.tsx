@@ -1,5 +1,5 @@
 import React from 'react'
-import NavigationLinks from '../../NavigationLinks/NavigationLinks'
+import NavigationLinks from '../NavigationLinks/NavigationLinks'
 
 const DesktopNavigation = () => {
     return (

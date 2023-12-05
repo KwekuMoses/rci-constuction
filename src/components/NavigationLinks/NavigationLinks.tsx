@@ -5,7 +5,7 @@ import './NavigationLinks.scss';
 import { isActiveLink } from '@/Utils/routeHelpers';
 import useFetchPageContent from '@/Hooks/useFetchPageContent';
 
-const NavigationItems = () => {
+const NavigationLinks = () => {
     const { pagesData, isLoading } = useFetchPageContent();
     const pathname = usePathname();
 
@@ -32,4 +32,4 @@ const NavigationItems = () => {
     );
 }
 
-export default NavigationItems;
+export default NavigationLinks;
