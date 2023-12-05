@@ -10,8 +10,7 @@ import { isMobileScreen } from '@/utils/handleResponsive';
 
 const Header = () => {
     const { width } = useWindowSize();
-    const isMobile = isMobileScreen(width);
-
+    const isMobile = isMobileScreen(width ?? 0);
 
     return (
         <div className="Header" id="Header">
