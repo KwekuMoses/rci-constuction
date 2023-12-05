@@ -26,7 +26,7 @@ export const fetchPageContent = async (id: number | null | undefined) => {
 
         return await response.json();
 
-    } catch (error) {
+    } catch (error: any) {
         console.error('Failed to fetch menu:', error.message);
         return [];
     }
