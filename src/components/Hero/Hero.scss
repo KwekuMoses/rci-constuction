@@ -6,10 +6,6 @@
     position: relative;
     margin-top: $headerHeight;
 
-    @media (min-width: $mediumScreens) {
-        margin-top: 0;
-    }
-
     &__Overlay {
         position: absolute;
         top: 0;
