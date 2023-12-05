@@ -1,4 +1,5 @@
 .MobileNavigation {
+
 	&__Burger {
 		cursor: pointer;
 		padding: 12px;
@@ -33,6 +34,7 @@
 		background: white; 
 		box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
 		z-index: 100;
+		transition: all 0.4s linear;
 	}
 }
 
@@ -43,6 +45,7 @@
 
 .MobileNavigation__Burger.open .BurgerLine:nth-child(2) {
     opacity: 0;
+	transform: translateY(5px); 
 }
 
 .MobileNavigation__Burger.open .BurgerLine:nth-child(3) {

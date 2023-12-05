@@ -11,8 +11,9 @@ const MobileNavigation = () => {
     };
 
     const menuAnimation = useSpring({
-        transform: isOpen ? `translateX(0)` : `translateX(-100vh)`,
+     transform: isOpen ? 'translateX(0)' : 'translateX(-100vw)',
     });
+
 
     return (
         <div className="MobileNavigation">
@@ -22,7 +23,7 @@ const MobileNavigation = () => {
                 <div className="BurgerLine"></div>
             </div>
             <animated.div style={menuAnimation} className="MobileNavigation__MobileMenu">
-                <NavigationLinks />
+                {/* <NavigationLinks /> */}
             </animated.div>
         </div>
     );

@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import './Header.scss';
 import Navigation from '../Navigation/Navigation';
@@ -12,7 +11,6 @@ import { isMobileScreen } from '@/Utils/handleResponsive';
 const Header = () => {
     const { width } = useWindowSize();
     const isMobile = isMobileScreen(width);
-
 
     return (
         <div className="Header" id="Header">
