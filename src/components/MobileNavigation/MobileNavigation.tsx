@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import NavigationLinks from './src/Components/NavigationLinks/NavigationLinks';
+import NavigationLinks from '../NavigationLinks/NavigationLinks';
 import './MobileNavigation.scss';
 
 const MobileNavigation = () => {
@@ -15,16 +15,10 @@ const MobileNavigation = () => {
     });
 
     return (
-
-
-
-
         <div className="MobileNavigation">
             <div className={`MobileNavigation__Burger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 <div className="BurgerLine"></div>
-                <div className="BurgerLine">TEST</div>
-
-
+                <div className="BurgerLine"></div>
                 <div className="BurgerLine"></div>
             </div>
             <animated.div style={menuAnimation} className="MobileNavigation__MobileMenu">

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-import MobileNavigation from '../../../MobileNavigation';
+import MobileNavigation from '../MobileNavigation/MobileNavigation';
 import DesktopNavigation from '../DesktopNavigation/DesktopNavigation';
 import './Navigation.scss';
 
