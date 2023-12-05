@@ -17,7 +17,8 @@ const NavigationLinks = ({ isMobile }: Props) => {
         return <div>Loading...</div>;
     }
 
-    const sortedPages = pagesData
+    // Check if pagesData is an array and sort if it is
+    const sortedPages = Array.isArray(pagesData)
         ? [...pagesData].sort((a, b) => a.menu_order - b.menu_order)
         : [];
 

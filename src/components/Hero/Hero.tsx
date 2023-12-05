@@ -18,17 +18,16 @@ const Hero = () => {
     const homePageId = 11
     const { pagesData, isLoading } = useFetchPageContent(homePageId);
     const { heroHeight, headerHeight } = useDynamicHeroHeight('#Header');
-    if (isLoading || !pagesData || !pagesData.content) {
+    if (isLoading || !pagesData) {
         return <div>Loading...</div>;
     }
 
-    console.log(Array.isArray(pagesData))
-
-    const imageUrl = pagesData ? extractImageUrl(pagesData.content.rendered) : null;
+    const pageContent = Array.isArray(pagesData) ? pagesData[0] : pagesData;
+    const imageUrl = pageContent ? extractImageUrl(pageContent.content.rendered) : null;
 
     return (
         <div className={`Hero ${poppins.className}`} style={{ height: heroHeight }}>
-            {pagesData && <HeroText pagesData={pagesData} />}
+            {pagesData && <HeroText pagesData={pageContent} />}
             {imageUrl && (
                 <Image
                     src={imageUrl}
