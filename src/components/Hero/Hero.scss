@@ -1,7 +1,14 @@
+@import '../../styles/variables.scss';
+
 .Hero {
     width: auto;
     height: 100vh;
     position: relative;
+    margin-top: $headerHeight;
+
+    @media (min-width: $mediumScreens) {
+        margin-top: 0;
+    }
 
     &__Overlay {
         position: absolute;

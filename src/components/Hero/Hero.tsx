@@ -25,7 +25,7 @@ const Hero = () => {
     const imageUrl = pagesData ? extractImageUrl(pagesData.content.rendered) : null;
 
     return (
-        <div className={`Hero ${poppins.className}`} style={{ height: heroHeight, marginTop: headerHeight }}>
+        <div className={`Hero ${poppins.className}`} style={{ height: heroHeight }}>
             {pagesData && <HeroText pagesData={pagesData} />}
             {imageUrl && (
                 <Image
