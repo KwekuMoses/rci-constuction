@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import './CtaButton.scss'
-import { dm_sans } from '@/styles/fonts';
+import { dm_sans } from '../../styles/fonts';
 
 interface Props {
     onClick?: () => void;
