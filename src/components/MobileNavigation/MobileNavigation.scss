@@ -1,5 +1,6 @@
-.MobileNavigation {
+@import '../../styles/variables.scss';
 
+.MobileNavigation {
 	&__Burger {
 		cursor: pointer;
 		padding: 12px;
@@ -22,33 +23,48 @@
 			width: 100%;
 			transition: all 0.3s ease;
 		}
-
 	}
 
 	&__MobileMenu {
 		position: fixed;
-		top: 0;
+		top: $headerHeight;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: white; 
+		background: white;
 		box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
 		z-index: 100;
-		transition: all 0.4s linear;
+
+		//Animation
+        height: 0; 
+        overflow: hidden; 
+        transition: transform 500ms ease, height 500ms ease;
+
+        &.open {
+            height: 600px;
+            transform: translateY(0);
+        }
+	}
+
+	&__CtaButton {
+		position: absolute;
+		bottom: 0;
+		display: grid;
+		place-items: center;
+		width:100vw;
 	}
 }
 
-
 .MobileNavigation__Burger.open .BurgerLine:nth-child(1) {
-    transform: translateY(10px) rotate(0deg);
+	transform: translateY(10px) rotate(0deg);
 }
 
 .MobileNavigation__Burger.open .BurgerLine:nth-child(2) {
-    opacity: 0;
-	transform: translateY(5px); 
+	opacity: 0;
+	transform: translateY(5px);
 }
 
 .MobileNavigation__Burger.open .BurgerLine:nth-child(3) {
-    transform: translateY(-5px) rotate(-0deg);
+	transform: translateY(-5px) rotate(-0deg);
 	opacity: 0;
 }

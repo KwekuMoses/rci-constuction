@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import NavigationLinks from '../NavigationLinks/NavigationLinks';
 import './MobileNavigation.scss';
+import CtaButton from '../CtaButton/CtaButton';
 
 const MobileNavigation = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +11,6 @@ const MobileNavigation = () => {
         setIsOpen(!isOpen);
     };
 
-    const menuAnimation = useSpring({
-     transform: isOpen ? 'translateX(0)' : 'translateX(-100vw)',
-    });
 
 
     return (
@@ -22,9 +20,12 @@ const MobileNavigation = () => {
                 <div className="BurgerLine"></div>
                 <div className="BurgerLine"></div>
             </div>
-            <animated.div style={menuAnimation} className="MobileNavigation__MobileMenu">
+            <div className={`MobileNavigation__MobileMenu ${isOpen ? 'open' : ''}`}>
                 {/* <NavigationLinks /> */}
-            </animated.div>
+                <div className="MobileNavigation__CtaButton">
+                    <CtaButton />
+                </div>
+            </div>
         </div>
     );
 };
