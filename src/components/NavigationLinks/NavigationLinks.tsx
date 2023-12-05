@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import './NavigationLinks.scss';
-import { isActiveLink } from '@/Utils/routeHelpers';
+import { isActiveLink } from '@/utils/routeHelpers';
 import useFetchPageContent from '@/Hooks/useFetchPageContent';
 
 interface Props {

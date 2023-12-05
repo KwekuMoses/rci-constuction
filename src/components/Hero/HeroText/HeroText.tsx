@@ -1,7 +1,7 @@
 import React from 'react'
 import './HeroText.scss';
 
-import { parseHtmlContent } from '@/Utils/extractTextContent';
+import { parseHtmlContent } from '@/utils/extractTextContent';
 
 interface HeroTextProps {
     pagesData: {

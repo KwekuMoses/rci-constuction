@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchPageContent } from '@/Utils/fetchContent';
+import { fetchPageContent } from '@/utils/fetchContent';
 import { SimpleCache } from './useCache';
 
 interface PagesData {
