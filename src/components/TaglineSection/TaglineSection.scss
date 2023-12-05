@@ -1,11 +1,17 @@
+@import '../../Styles/variables';
+
+
 .TaglineSection {
+	&__Title {
+		font-size: 1.3rem;
+		text-align: center;
+        margin-top: $sectionMarginMedium;
+	}
 
-    &__Title {
-        font-size: 1.3rem;
-        text-align: center;
-    }
-
-    &__Description {
-        
-    }
+	&__Description {
+		max-width: 100%;
+		text-align: center;
+		padding: 0 24px;
+        margin-bottom: $sectionMarginMedium;
+	}
 }

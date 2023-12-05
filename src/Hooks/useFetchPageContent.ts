@@ -46,6 +46,7 @@ const useFetchPageContent = (pageId?: number): FetchContentReturn => {
         fetchData();
     }, [pageId]);
 
+
     return { pagesData, isLoading };
 };
 
