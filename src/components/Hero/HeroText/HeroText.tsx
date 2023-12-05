@@ -16,7 +16,7 @@ interface HeroTextProps {
     };
 }
 
-const HeroText: React.FC<HeroTextProps> = ({ pagesData }) => {
+const HeroText = ({ pagesData }: HeroTextProps) => {
     const { h1Content, pContent, h2Content } = parseHtmlContent(pagesData.content.rendered);
 
     return (

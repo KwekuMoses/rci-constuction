@@ -8,9 +8,11 @@ import LogoSection from '../components/LogoSection/LogoSection'
 import WorkWithUs from '../components/WorkWithUs/WorkWithUs'
 import CustomMarquee from '../components/CustomMarquee/CustomMarquee'
 import Footer from '../components/Footer/Footer'
+import { fetchPageContent } from '@/utils/fetchContent'
 
 
 export default function Home() {
+
   return (
     <main>
       <Header />
