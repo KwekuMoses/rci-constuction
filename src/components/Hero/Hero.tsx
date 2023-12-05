@@ -12,7 +12,7 @@ import './Hero.scss';
 
 import useFetchPageContent from '@/Hooks/useFetchPageContent';
 import useDynamicHeroHeight from '@/Hooks/useDynamicHeroHeight';
-import { extractImageUrl } from '@/Utils/extractImageUrl';
+import { extractImageUrl } from '@/utils/extractImageUrl';
 
 const Hero = () => {
     const homePageId = 11

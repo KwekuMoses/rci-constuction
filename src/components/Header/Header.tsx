@@ -6,7 +6,7 @@ import Button from '../CtaButton/CtaButton';
 import Logo from '../Logo/Logo';
 
 import { useWindowSize } from '@/Hooks/useWindowSize';
-import { isMobileScreen } from '@/Utils/handleResponsive';
+import { isMobileScreen } from '@/utils/handleResponsive';
 
 const Header = () => {
     const { width } = useWindowSize();
