@@ -1,18 +1,15 @@
 'use client';
 import React from 'react';
-import NavigationItems from '../NavigationItems/NavigationItem';
 
-import { useWindowSize } from '@/Hooks/useWindowSize';
-import { isMobileScreen } from '@/Utils/handleResponsive';
-
-import MobileNavigation from './MobileNavigation/MobileNavigation';
-import DesktopNavigation from './DesktopNavigation/DesktopNavigation';
+import MobileNavigation from '../MobileNavigation/MobileNavigation';
+import DesktopNavigation from '../DesktopNavigation/DesktopNavigation';
 import './Navigation.scss';
 
+interface Props {
+    isMobile: boolean;
+}
 
-const Navigation = () => {
-    const { width } = useWindowSize();
-    const isMobile = isMobileScreen(width);
+const Navigation = ({ isMobile }: Props) => {
 
     return (
         <div className="Navigation">
