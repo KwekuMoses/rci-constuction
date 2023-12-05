@@ -1,5 +1,11 @@
+interface MenuItem {
+    menu_order: number;
+    title: {
+        rendered: string;
+    };
+}
 
-export const sortByMenuOrder = <T extends { menu_order: number, title: { rendered: string } }>(items: T[]): T[] => {
+export const sortByMenuOrder = (items: MenuItem[]) => {
     if (!items) {
         return [];
     }

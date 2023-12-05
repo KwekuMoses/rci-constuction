@@ -4,28 +4,29 @@ import React, { useState, useEffect } from 'react'
 
 import Image from 'next/image'
 
-import useFetchPageContent from '@/Hooks/useFetchPageContent';
-import useDynamicHeroHeight from '@/Hooks/useDynamicHeroHeight';
-import { extractImageUrl } from '@/utils/extractImageUrl';
+import HeroText from './HeroText/HeroText';
+
+import { poppins } from '@/Styles/fonts';
 
 import './Hero.scss';
 
-import HeroText from './HeroText/HeroText';
-
+import useFetchPageContent from '@/Hooks/useFetchPageContent';
+import useDynamicHeroHeight from '@/Hooks/useDynamicHeroHeight';
+import { extractImageUrl } from '@/Utils/extractImageUrl';
 
 const Hero = () => {
     const homePageId = 11
-    const { pageContent, isLoading } = useFetchPageContent(homePageId);
-    const imageUrl = pageContent ? extractImageUrl(pageContent.content.rendered) : null;
+    const { pagesData, isLoading } = useFetchPageContent(homePageId);
     const heroHeight = useDynamicHeroHeight('#Header');
 
     if (isLoading) {
         return <div>Loading...</div>;
     }
+    const imageUrl = pagesData ? extractImageUrl(pagesData.content.rendered) : null;
 
     return (
-        <div className="Hero" style={{ height: heroHeight }}>
-            <HeroText pageContent={pageContent} />
+        <div className={`Hero ${poppins.className}`} style={{ height: heroHeight }}>
+            {pagesData && <HeroText pagesData={pagesData} />}
             {imageUrl && (
                 <Image
                     src={imageUrl}
@@ -34,7 +35,7 @@ const Hero = () => {
                     objectFit='cover'
                 />
             )}
-            <div className="Hero__Overlay"></div>
+            <div className={`Hero__Overlay`}></div>
         </div >
     )
 }

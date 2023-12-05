@@ -1,26 +1,20 @@
 import React from 'react'
 import './HeroText.scss';
 
-import { parseHtmlContent } from '@/utils/extractTextContent';
-
+import { parseHtmlContent } from '@/Utils/extractTextContent';
 
 interface HeroTextProps {
-    pageContent: {
-        content: {
-            rendered: string;
-        };
-        excerpt: {
-            rendered: string;
-        };
+    pagesData: {
+    // content: {
+    //     // rendered: string;
+    // };
+
 
     };
 }
 
-const HeroText: React.FC<HeroTextProps> = ({ pageContent }) => {
-    const { h1Content, pContent, h2Content } = parseHtmlContent(pageContent.content.rendered);
-
-
-
+const HeroText: React.FC<HeroTextProps> = ({ pagesData }) => {
+    const { h1Content, pContent, h2Content } = parseHtmlContent(pagesData.content.rendered);
 
     return (
         <div className="HeroText">

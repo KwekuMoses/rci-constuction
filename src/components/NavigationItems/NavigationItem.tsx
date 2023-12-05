@@ -1,27 +1,35 @@
-import React, { useState, useEffect } from 'react'
-import { fetchMenu } from '../../utils/fetchMenu';
+import React, { useMemo } from 'react';
 import Link from 'next/link';
-import './NavigationItems.scss'
-import { sortByMenuOrder } from '../../utils/sort';
-import { useActiveLink } from '@/utils/routeHelpers';
+import { usePathname } from 'next/navigation';
+import './NavigationItems.scss';
+import { isActiveLink } from '@/Utils/routeHelpers';
 import useFetchPageContent from '@/Hooks/useFetchPageContent';
 
-
 const NavigationItems = () => {
-    const { pageContent, isLoading } = useFetchPageContent() || [];
-    const sortedPageContent = pageContent ? sortByMenuOrder(pageContent) : [];
+    const { pagesData, isLoading } = useFetchPageContent();
+    const pathname = usePathname();
 
     if (isLoading) {
         return <div>Loading...</div>;
     }
 
+    const sortedPages = pagesData
+        ? [...pagesData].sort((a, b) => a.menu_order - b.menu_order)
+        : [];
+
     return (
         <div className="NavigationItems">
-            {sortedPageContent.map(({ menu_order, title }) => (
-                <Link className={`NavigationItems__Link ${useActiveLink(title.rendered)}`} href={title.rendered} key={menu_order}> {title.rendered} </Link>
+            {sortedPages.map(({ menu_order, title }) => (
+                <Link
+                    className={`NavigationItems__Link ${isActiveLink(pathname, title.rendered)}`}
+                    href={title.rendered}
+                    key={menu_order}
+                >
+                    {title.rendered}
+                </Link>
             ))}
         </div>
-    )
+    );
 }
 
-export default NavigationItems
+export default NavigationItems;

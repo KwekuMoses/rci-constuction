@@ -1,5 +1,5 @@
-@import "../../app/globals/variables.scss";
-@import "../../app/globals/mixins.scss";
+@import "../../Styles/variables.scss";
+@import "../../Styles/mixins.scss";
 
 .Button {
     @include cta-button;
