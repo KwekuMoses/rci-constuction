@@ -1,16 +1,30 @@
 import { useState, useEffect } from 'react';
 
+interface Size {
+    width: number | undefined;
+    height: number | undefined;
+}
+
 export const useWindowSize = () => {
-    const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight });
+    // Use the Size type for the state
+    const [size, setSize] = useState<Size>({ width: undefined, height: undefined });
 
     useEffect(() => {
         const handleResize = () => {
+            // Now this assignment is valid
             setSize({ width: window.innerWidth, height: window.innerHeight });
         };
 
-        window.addEventListener('resize', handleResize);
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', handleResize);
+            // Call handler immediately to set initial size
+            handleResize();
+        }
+
         return () => {
-            window.removeEventListener('resize', handleResize);
+            if (typeof window !== 'undefined') {
+                window.removeEventListener('resize', handleResize);
+            }
         };
     }, []);
 
