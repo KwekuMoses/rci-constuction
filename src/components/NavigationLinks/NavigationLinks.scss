@@ -1,16 +1,31 @@
-.NavigationItems {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    &__Link {
-        text-decoration: none; /* Removes underline */
-        color:black;
-        margin: 0 15px;
-        height: max-content;
+@import "../../styles/variables.scss";
 
-        &.active {
-            font-weight: bold; // This will make the text bold
-        }
+.NavigationLinks {
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: center;
 
-    }
+	&__Link {
+		text-decoration: none; 
+		color: black;
+		margin: 0 15px;
+		height: max-content;
+
+		&.active {
+			font-weight: bold; 
+		}
+	}
+
+	&--Mobile {
+		grid-auto-flow: row;
+
+		.NavigationLinks__Link {
+			margin: 15px 0;
+			display: grid;
+			place-content: center;
+			height: 50px;
+			border-bottom: 1px solid $grey;
+			width: 100vw;
+		}
+	}
 }

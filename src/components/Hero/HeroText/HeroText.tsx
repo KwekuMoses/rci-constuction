@@ -5,15 +5,16 @@ import { parseHtmlContent } from '@/Utils/extractTextContent';
 
 interface HeroTextProps {
     pagesData: {
-    // content: {
-    //     // rendered: string;
-    // };
+        content: {
+            rendered: string;
+        };
 
 
     };
 }
 
 const HeroText: React.FC<HeroTextProps> = ({ pagesData }) => {
+    console.log(pagesData.content)
     const { h1Content, pContent, h2Content } = parseHtmlContent(pagesData.content.rendered);
 
     return (

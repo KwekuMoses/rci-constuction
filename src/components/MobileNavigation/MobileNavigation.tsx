@@ -4,7 +4,11 @@ import NavigationLinks from '../NavigationLinks/NavigationLinks';
 import './MobileNavigation.scss';
 import CtaButton from '../CtaButton/CtaButton';
 
-const MobileNavigation = () => {
+interface Props {
+    isMobile: boolean;
+}
+
+const MobileNavigation = ({ isMobile }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -21,7 +25,7 @@ const MobileNavigation = () => {
                 <div className="BurgerLine"></div>
             </div>
             <div className={`MobileNavigation__MobileMenu ${isOpen ? 'open' : ''}`}>
-                {/* <NavigationLinks /> */}
+                <NavigationLinks isMobile={isMobile} />
                 <div className="MobileNavigation__CtaButton">
                     <CtaButton />
                 </div>

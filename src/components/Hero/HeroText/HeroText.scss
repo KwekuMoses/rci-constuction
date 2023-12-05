@@ -8,7 +8,12 @@
             margin: 0;
             padding: 0;
             color: $orange;
-            font-size: 12rem;
+            font-size: 6rem;
+
+            @media(min-width: $mediumScreens) {
+                font-size: 12rem;
+        
+            }
     }
 
     &__Paragraph {

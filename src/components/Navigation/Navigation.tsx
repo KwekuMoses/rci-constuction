@@ -13,7 +13,7 @@ const Navigation = ({ isMobile }: Props) => {
 
     return (
         <div className="Navigation">
-            {isMobile ? <MobileNavigation /> : <DesktopNavigation />}
+            {isMobile ? <MobileNavigation isMobile={isMobile} /> : <DesktopNavigation isMobile={isMobile} />}
         </div>
     );
 };

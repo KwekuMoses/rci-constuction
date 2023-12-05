@@ -19,7 +19,7 @@ const Hero = () => {
     const { pagesData, isLoading } = useFetchPageContent(homePageId);
     const { heroHeight, headerHeight } = useDynamicHeroHeight('#Header');
 
-    if (isLoading) {
+    if (isLoading || !pagesData || !pagesData.content) {
         return <div>Loading...</div>;
     }
     const imageUrl = pagesData ? extractImageUrl(pagesData.content.rendered) : null;

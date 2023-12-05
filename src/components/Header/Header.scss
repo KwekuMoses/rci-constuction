@@ -1,15 +1,30 @@
 @import "../../Styles/variables.scss";
 
 .Header {
-    display: grid;
-    grid-auto-flow: column;
-    place-items: center;
-    justify-content: space-around;
-    background-color: $grey;
-    height: $headerHeight;
-    position: fixed;
-    z-index: 999;
-    width: 100vw;
-    top: 0;
-    min-width: 300px;
+	display: grid;
+	grid-auto-flow: column;
+	place-items: center;
+	justify-content: space-around;
+	background-color: $grey;
+	height: $headerHeight;
+	position: fixed;
+	z-index: 999;
+	width: 100vw;
+	top: 0;
+	min-width: 300px;
+
+	.Logo {
+		position: absolute;
+		left: 24px;
+		width: max-content;
+		top: 15px;
+	}
+
+	@media (min-width: 768px) {
+		.Logo {
+			position: relative;
+            left: unset;
+            top: unset;
+		}
+	}
 }

@@ -5,7 +5,11 @@ import './NavigationLinks.scss';
 import { isActiveLink } from '@/Utils/routeHelpers';
 import useFetchPageContent from '@/Hooks/useFetchPageContent';
 
-const NavigationLinks = () => {
+interface Props {
+    isMobile: boolean;
+}
+
+const NavigationLinks = ({ isMobile }: Props) => {
     const { pagesData, isLoading } = useFetchPageContent();
     const pathname = usePathname();
 
@@ -18,10 +22,10 @@ const NavigationLinks = () => {
         : [];
 
     return (
-        <div className="NavigationItems">
+        <div className={`NavigationLinks NavigationLinks--${isMobile ? "Mobile" : "Desktop"}`}>
             {sortedPages.map(({ menu_order, title }) => (
                 <Link
-                    className={`NavigationItems__Link ${isActiveLink(pathname, title.rendered)}`}
+                    className={`NavigationLinks__Link ${isActiveLink(pathname, title.rendered)}`}
                     href={title.rendered}
                     key={menu_order}
                 >
