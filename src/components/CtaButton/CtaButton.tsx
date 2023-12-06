@@ -5,12 +5,11 @@ import { dm_sans_buttons } from '../../Styles/fonts';
 import Link from 'next/link'
 
 interface Props {
-    onClick?: () => void;
     link: string;
-    width: string | undefined;
+    width: string;
 }
 
-const CtaButton = ({ onClick, link, width }: Props) => {
+const CtaButton = ({ link, width }: Props) => {
 
 
     return (
