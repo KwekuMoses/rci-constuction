@@ -16,7 +16,9 @@ const Header = () => {
         <div className="Header" id="Header">
             <div className="Header__Column Logo"><Logo /></div>
             <div className="Header__Column"><Navigation isMobile={isMobile} /></div>
-            {!isMobile && <div className="Header__Column"><Button /></div>}
+            {!isMobile && <div className="Header__Column">
+                {/* <Button /> */}
+            </div>}
         </div>
     );
 };
