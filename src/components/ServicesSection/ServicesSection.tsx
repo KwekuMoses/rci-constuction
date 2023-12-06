@@ -29,6 +29,8 @@ const ServicesSection = ({ servicesData }: Props) => {
 
                 const linkUrl = title?.toLowerCase();
 
+                const text_link_formatted = text_link?.toLowerCase();
+
                 return (
                     <div className="Services__Card" key={index}>
                         <div className="Services__CardImageWrapper">
@@ -36,7 +38,7 @@ const ServicesSection = ({ servicesData }: Props) => {
                         </div>
                         <h3 className="Services__CardTitle">{title}</h3>
                         <div className="Services__CardText">{text}</div>
-                        <Link className="Services__CardLink" href={linkUrl}>{text_link}</Link>
+                        <Link className="Services__CardLink" href={linkUrl}>{text_link_formatted}</Link>
                     </div>
                 );
             })}
