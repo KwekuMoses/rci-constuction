@@ -32,7 +32,7 @@ const ServicesSection = ({ servicesData }: Props) => {
                 return (
                     <div className="Services__Card" key={index}>
                         <div className="Services__CardImageWrapper">
-                            <Image src={image} alt={title} layout="fill" quality={100} objectFit="none" loading="lazy" />
+                            <Image src={image} alt={title} layout="fill" quality={100} objectFit="cover" loading="lazy" />
                         </div>
                         <h3 className="Services__CardTitle">{title}</h3>
                         <div className="Services__CardText">{text}</div>
