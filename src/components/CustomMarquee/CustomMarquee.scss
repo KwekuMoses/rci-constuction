@@ -6,18 +6,15 @@
     margin-top: $sectionMarginMedium; 
     margin-bottom: $sectionMarginMedium;
 
-
     &__Content {
         display: grid;
         align-items: center;
-        // animation: marquee 3s linear infinite;
-     
     }
 
     &__ImageContainer {
-        width: 100px; // Width of the image
-        flex-shrink: 0; // Prevents images from shrinking
-        margin: 0 12px; // Spacing between images
+        width: 100px; 
+        flex-shrink: 0;
+        margin: 0 12px; 
    
         &--first {
             width: 200px;
@@ -26,9 +23,5 @@
       &--second{
             width: 300px;
         }
-        
-    
     }
-
-    
 }
