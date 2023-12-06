@@ -35,7 +35,7 @@ const BookingSection = ({ bookingData }: Props) => {
                     );
                 })}
             </div>
-            <Button link="/kontakta-oss" />
+            <Button link="/kontakta-oss" width="medium" />
         </>
     );
 }
