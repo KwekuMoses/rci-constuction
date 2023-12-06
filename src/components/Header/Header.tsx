@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Header.scss';
 import Navigation from '../Navigation/Navigation';
 import Button from '../CtaButton/CtaButton';
@@ -11,15 +11,19 @@ import { isMobileScreen } from '@/utils/handleResponsive';
 const Header = () => {
     const { width } = useWindowSize();
     const isMobile = isMobileScreen(width ?? 0);
+    const headerRef = useRef<HTMLDivElement>(null);
+
 
     useEffect(() => {
         let lastScrollTop = 0;
         const onScroll = () => {
-            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            if (currentScroll > lastScrollTop) {
-                document.getElementById("Header").style.top = "-70px";
-            } else {
-                document.getElementById("Header").style.top = "0";
+            let currentScroll = window.scrollY || document.documentElement.scrollTop;
+            if (headerRef.current) {
+                if (currentScroll > lastScrollTop) {
+                    headerRef.current.style.top = "-70px";
+                } else {
+                    headerRef.current.style.top = "0";
+                }
             }
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         };
@@ -29,7 +33,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className="Header" id="Header">
+        <div className="Header" id="Header" ref={headerRef}>
             <div className="Header__Column Logo"><Logo /></div>
             <div className="Header__Column"><Navigation isMobile={isMobile} /></div>
             {!isMobile && <div className="Header__Column">
