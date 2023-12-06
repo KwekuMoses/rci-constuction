@@ -27,7 +27,7 @@ const MobileNavigation = ({ isMobile }: Props) => {
             <div className={`MobileNavigation__MobileMenu ${isOpen ? 'open' : ''}`}>
                 {/* <NavigationLinks isMobile={isMobile} /> */}
                 <div className="MobileNavigation__CtaButton">
-                    <CtaButton />
+                    {/* <CtaButton /> */}
                 </div>
             </div>
         </div>
