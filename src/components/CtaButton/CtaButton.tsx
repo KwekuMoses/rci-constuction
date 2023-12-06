@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import './CtaButton.scss'
 import { dm_sans_buttons } from '../../Styles/fonts';
@@ -7,14 +6,15 @@ import Link from 'next/link'
 
 interface Props {
     onClick?: () => void;
-    text: string;
     link: string;
+    width: string | undefined;
 }
 
-const CtaButton = ({ onClick, text, link }: Props) => {
+const CtaButton = ({ onClick, link, width }: Props) => {
+
 
     return (
-        <Link href="/" className={`Button ${dm_sans_buttons.className}`}>Boka konsultation</Link>
+        <Link href={`${link}`} className={`Button ${dm_sans_buttons.className} ${width === "full" ? "full-width" : ""}`}>Boka konsultation</Link>
     )
 }
 

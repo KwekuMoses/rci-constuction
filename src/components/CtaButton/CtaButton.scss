@@ -3,4 +3,11 @@
 
 .Button {
     @include cta-button;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+
+    .full-width {
+        width: 100%;
+    }
 }
