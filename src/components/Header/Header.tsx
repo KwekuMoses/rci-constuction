@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Header.scss';
 import Navigation from '../Navigation/Navigation';
 import Button from '../CtaButton/CtaButton';
@@ -11,6 +11,22 @@ import { isMobileScreen } from '@/utils/handleResponsive';
 const Header = () => {
     const { width } = useWindowSize();
     const isMobile = isMobileScreen(width ?? 0);
+
+    useEffect(() => {
+        let lastScrollTop = 0;
+        const onScroll = () => {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop) {
+                document.getElementById("Header").style.top = "-70px";
+            } else {
+                document.getElementById("Header").style.top = "0";
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        };
+
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
     return (
         <div className="Header" id="Header">
