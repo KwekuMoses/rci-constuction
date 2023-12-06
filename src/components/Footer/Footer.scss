@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.Footer {
+	background: $grey;
+	height: max-content;
+    padding:24px 0;
+
+	&__Services {
+		display: flex;
+        justify-content: center;
+        position: relative;
+        width: max-content;
+        margin: 0 auto;
+        border-bottom: 1px solid rgba(194, 194, 194, 0.336);
+        font-size: 12px;
+        text-transform: uppercase;
+	}
+
+    &__Divider {
+    }
+
+	&__ServiceLink {
+		width: max-content;
+        margin: 10px 10px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+	}
+    &__Social {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__Icon {
+        width: 18px;
+        margin: 10px;
+    }
+
+    &__Copyright {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        margin: 10px;
+    }
+}

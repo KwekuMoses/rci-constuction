@@ -1,9 +1,48 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
+import './Footer.scss';
 
-const Footer = () => {
-    return (
-        <div>Footer</div>
-    )
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+// In your component
+
+
+
+interface Props {
+    servicesData: {
+        id: number;
+        title: { rendered: string };
+        slug: string;
+    }[];
 }
 
-export default Footer
+const Footer = ({ servicesData }: Props) => {
+    return (
+        <div className='Footer'>
+            <div className="Footer__Services">
+                {servicesData.map(service => (
+                    <div className="Footer__ServiceLink" key={service.id}>
+                        <Link href={`/service/${service.slug}`}>
+                            {service.title.rendered}
+                        </Link>
+                    </div>
+                ))}
+                <span className="Footer__Divider"></span>
+            </div>
+            <div className="Footer__Social">
+                <div className="Footer__Icon">
+                    <FontAwesomeIcon icon={faFacebook} />
+                </div>
+                <div className='Footer__Icon'>
+                    <FontAwesomeIcon icon={faInstagram} />
+                </div>
+            </div>
+            <div className="Footer__Copyright">
+                Copyright © 2023 All Rights Reserved
+            </div>
+        </div>
+    );
+}
+
+export default Footer;

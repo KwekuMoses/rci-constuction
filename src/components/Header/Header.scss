@@ -15,16 +15,18 @@
 
 	.Logo {
 		position: absolute;
-		left: 24px;
+		left: 18px;
 		width: max-content;
-		top: 15px;
+		display: grid;
+		height: 100%;
+		align-content: center;
 	}
 
 	@media (min-width: 768px) {
 		.Logo {
 			position: relative;
-            left: unset;
-            top: unset;
+			left: unset;
+			top: unset;
 		}
 	}
 }
