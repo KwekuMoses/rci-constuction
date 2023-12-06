@@ -12,14 +12,15 @@ interface Props {
 }
 
 const CustomMarquee = ({ logoData }: Props) => {
+
     const { image_1, image_2, image_3 } = logoData;
 
     return (
         <div className="Marquee">
             <div className="Marquee__Content">
                 <Marquee>
-                    {image_1 && <div className="Marquee__ImageContainer--first"><Image src={image_1} alt="Logo 1" layout="responsive" width={100} height={50} priority={true} /></div>}
-                    {image_2 && <div className="Marquee__ImageContainer--second"><Image src={image_2} alt="Logo 2" layout="responsive" width={100} height={50} priority={true} /></div>}
+                    {image_1 && <div className="Marquee__ImageContainer Marquee__ImageContainer--first"><Image src={image_1} alt="Logo 1" layout="responsive" width={100} height={50} priority={true} /></div>}
+                    {image_2 && <div className="Marquee__ImageContainer Marquee__ImageContainer--second"><Image src={image_2} alt="Logo 2" layout="responsive" width={100} height={50} priority={true} /></div>}
                     {image_3 && <div className="Marquee__ImageContainer"><Image src={image_3} alt="Logo 3" layout="responsive" width={100} height={50} priority={true} /></div>}
                 </Marquee>
             </div>
