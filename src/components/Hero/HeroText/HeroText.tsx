@@ -1,12 +1,9 @@
 import React from 'react'
 import './HeroText.scss';
 
-import { parseHtmlContent } from '@/utils/extractTextContent';
-
 import { dm_sans_bold } from '@/Styles/fonts';
 import { dm_sans_thin } from '@/Styles/fonts';
 
-import { fetchData } from '@/utils/fetchData';
 
 interface Props {
     heroData: {
