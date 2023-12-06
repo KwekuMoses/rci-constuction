@@ -8,10 +8,6 @@ import { poppins } from '../../Styles/fonts';
 
 import './Hero.scss';
 
-// import useFetchPageContent from '@/Hooks/useFetchPageContent';
-import useDynamicHeroHeight from '@/Hooks/useDynamicHeroHeight';
-import { extractImageUrl } from '@/utils/extractImageUrl';
-
 interface Props {
     heroData: {
         imageUrl: string | null;
