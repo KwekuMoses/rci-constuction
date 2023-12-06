@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './SecondaryButton.scss'
 interface Props {
     buttonData: string;
 }
@@ -7,7 +7,7 @@ interface Props {
 const SecondaryButton = ({ buttonData }: Props) => {
     const text = buttonData
     return (
-        <div>{text}</div>
+        <div className="SecondaryButton">{text}</div>
     )
 }
 

@@ -2,12 +2,15 @@ import React from 'react'
 import Title from '../Title/Title'
 import Link from 'next/link';
 
+import Image from 'next/image'
+
 import './Services.scss'
 
 interface Props {
     servicesData: {
         title: string | null;
         cards: {
+            image: string | null;
             map: Function;
         }
     }
@@ -18,20 +21,22 @@ const ServicesSection = ({ servicesData }: Props) => {
     const cardsArray = Object.values(cards);
 
 
-
     return (
         <div className="Services">
             <Title title={title} />
             {cardsArray.map((card: any, index: number) => {
-                const { title, text, text_link } = card;
+                const { title, text, text_link, image } = card;
+
                 const linkUrl = title?.toLowerCase();
 
                 return (
                     <div className="Services__Card" key={index}>
-                        <div>IMAGE</div>
+                        <div className="Services__CardImageWrapper">
+                            <Image src={image} alt={title} layout="fill" quality={100} objectFit="none" loading="lazy" />
+                        </div>
                         <h3 className="Services__CardTitle">{title}</h3>
                         <div className="Services__CardText">{text}</div>
-                        <Link href={linkUrl}>{text_link}</Link>
+                        <Link className="Services__CardLink" href={linkUrl}>{text_link}</Link>
                     </div>
                 );
             })}

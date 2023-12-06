@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+
+import './CustomerQuoteSection.scss'
 interface Props {
     socialProofData: {
         image: string | null;

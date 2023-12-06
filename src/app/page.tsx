@@ -1,14 +1,14 @@
 import Hero from '../components/Hero/Hero'
 import Introduction from '../components/Introduction/Introduction'
 import ServicesSection from '../components/ServicesSection/ServicesSection'
-import CustomerQuoteSection from '../components/CustomerQuoteSection/CustomerQuoteSection'
+import CustomerQuoteSection from '../components/CustomerQuote/CustomerQuote'
 import BookingSection from '../components/BookingSection/BookingSection'
 // import LogoSection from '../components/LogoSection/LogoSection'
 import WorkWithUs from '../components/WorkWithUs/WorkWithUs'
 import CustomMarquee from '../components/CustomMarquee/CustomMarquee'
 import { fetchData } from '../utils/fetchData'
 import SecondaryButton from '@/components/SecondaryButton/SecondaryButton'
-
+import styles from './page.module.css'
 
 export default async function Home() {
   const homePageId = 11
@@ -24,15 +24,17 @@ export default async function Home() {
 
 
   return (
-    <main>
+    <div className={styles.Home}>
       <Hero heroData={heroData} />
       <Introduction introductionData={introductionData} />
       <ServicesSection servicesData={servicesData} />
-      <SecondaryButton buttonData={buttonData} />
+      <div className={styles.ButtonWrapper}>
+        <SecondaryButton buttonData={buttonData} />
+      </div>
       <CustomerQuoteSection socialProofData={socialProofData} />
       <BookingSection bookingData={bookingData} />
       <CustomMarquee logoData={logoData} />
       <WorkWithUs careerData={careerData} />
-    </main>
+    </div>
   )
 }

@@ -1,12 +1,44 @@
-
 .Services {
-    display: grid;
-    place-content: center;
-    &__Card {
-        box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
-        max-width: 86vw;
-        padding: 12px;
-        margin-bottom: 12px;
-        background-color: yellow;
-    }
+	display: grid;
+	place-content: center;
+
+	&__Card {
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+		max-width: 86vw;
+		margin-bottom: 12px;
+		position: relative;
+		display: block;
+		display: grid;
+		grid-auto-flow: row;
+		grid-template-rows: 288px max-content max-content;
+
+		&ImageWrapper {
+			position: relative;
+			grid-row: 1/2;
+			overflow: hidden;
+		}
+
+		&Title {
+			display: block;
+			grid-row: 2;
+			padding: 12px 18px;
+		}
+
+		&Text {
+			display: block;
+			padding: 0 18px;
+		}
+
+		&Link {
+			text-decoration: none;
+			padding: 24px 18px 24px 18px;
+			color: black;
+            font-weight:bold;
+            justify-self: end;
+
+			&:visited {
+				color: inherit;
+			}
+		}
+	}
 }
