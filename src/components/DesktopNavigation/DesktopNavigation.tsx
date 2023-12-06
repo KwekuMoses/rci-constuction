@@ -8,7 +8,7 @@ interface Props {
 const DesktopNavigation = ({ isMobile }: Props) => {
     return (
         <>
-            <NavigationLinks isMobile={isMobile} />
+            {/* <NavigationLinks isMobile={isMobile} /> */}
         </>
     )
 }
