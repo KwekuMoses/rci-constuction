@@ -14,6 +14,12 @@
 	min-width: 300px;
 	transition: top 0.3s ease-in-out;
 
+	.MobileNav {
+		@media (min-width: 768px) {
+			display: none;
+		}
+	}
+
 	.Logo {
 		position: absolute;
 		left: 18px;

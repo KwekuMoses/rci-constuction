@@ -16,19 +16,22 @@ interface Props {
 }
 
 const Header = ({ servicesData, navigationData }: Props) => {
-    const { width } = useWindowSize() || {};
-    const isMobile = isMobileScreen(width ?? 0);
+    // const { width } = useWindowSize() || {};
+    // const isMobile = isMobileScreen(width ?? 0);
     const [isOpen, setIsOpen] = useState(false);
 
     useMakeHeaderSticky("Header", -70, isOpen);
+
+    let isMobile = true;
 
     return (
         <div className="Header" id="Header">
             <div className="Header__Column Logo"><Logo /></div>
             <div className="Header__Column"><Navigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} /></div>
-            {!isMobile && <div className="Header__Column">
+
+            <div className="Header__Column">
                 {/* <Button /> */}
-            </div>}
+            </div>
         </div>
     );
 };
