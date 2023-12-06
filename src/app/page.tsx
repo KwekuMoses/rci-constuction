@@ -27,7 +27,6 @@ export default async function Home() {
 
   return (
     <main>
-      <Header />
       <Hero heroData={heroData} />
       <Introduction introductionData={introductionData} />
       <ServicesSection servicesData={servicesData} />
@@ -36,7 +35,6 @@ export default async function Home() {
       <BookingSection bookingData={bookingData} />
       <CustomMarquee logoData={logoData} />
       <WorkWithUs careerData={careerData} />
-      <Footer />
     </main>
   )
 }
