@@ -20,7 +20,7 @@ const CustomerQuoteSection = ({ socialProofData }: Props) => {
         <div className="CustomerQuote">
             <div className="CustomerQuote__ImageWrapper">
                 {image && (
-                    <Image className='CustomerQuote__Image' src={image} alt="Customer Image" layout='fill' objectFit='none' />
+                    <Image className='CustomerQuote__Image' src={image} alt="Customer Image" layout='fill' objectFit='contain' />
                 )}
 
             </div>
