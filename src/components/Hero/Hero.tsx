@@ -36,6 +36,7 @@ const Hero = ({ heroData }: Props) => {
                     alt="Hero Image"
                     layout='fill'
                     objectFit='cover'
+                    priority={true}
                 />
             )}
             <div className={`Hero__Overlay`}></div>
