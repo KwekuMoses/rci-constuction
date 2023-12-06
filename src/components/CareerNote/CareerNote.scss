@@ -1,0 +1,28 @@
+@import '../../Styles/variables.scss';
+
+.CareerNote {
+    display: grid;
+    place-content: center;
+    width: 90vw;
+    margin: 0 auto;
+    background:#e3e3e3;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: $sectionMarginMedium;
+    border-radius: 12px;
+	&__Title {
+	}
+	&__Text {
+	}
+
+	&__Link {
+        text-decoration: none;
+        background-color: black;
+        padding: 12px;
+        color:white;
+        width: max-content;
+        place-self: center;
+        margin-bottom: 18px;
+	}
+}

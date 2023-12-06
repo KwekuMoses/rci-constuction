@@ -3,7 +3,7 @@ import Introduction from '../components/Introduction/Introduction'
 import ServicesSection from '../components/ServicesSection/ServicesSection'
 import CustomerQuote from '../components/CustomerQuote/CustomerQuote'
 import BookingSection from '../components/BookingSection/BookingSection'
-import WorkWithUs from '../components/WorkWithUs/WorkWithUs'
+import CareerNote from '../components/CareerNote/CareerNote'
 import CustomMarquee from '../components/CustomMarquee/CustomMarquee'
 import { fetchData } from '../utils/fetchData'
 import SecondaryButton from '@/components/SecondaryButton/SecondaryButton'
@@ -32,7 +32,7 @@ export default async function Home() {
       <CustomerQuote socialProofData={socialProofData} />
       <BookingSection bookingData={bookingData} />
       <CustomMarquee logoData={logoData} />
-      <WorkWithUs careerData={careerData} />
+      <CareerNote careerData={careerData} />
     </div>
   )
 }
