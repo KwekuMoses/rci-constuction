@@ -22,7 +22,7 @@ export default async function Home() {
   const careerData = homePageData.acf.career_note
 
   return (
-    <div className={styles.Home}>
+    <main className={styles.Home}>
       <Hero heroData={heroData} />
       <Introduction introductionData={introductionData} />
       <ServicesSection servicesData={servicesData} />
@@ -33,6 +33,6 @@ export default async function Home() {
       <BookingSection bookingData={bookingData} />
       <CustomMarquee logoData={logoData} />
       <CareerNote careerData={careerData} />
-    </div>
+    </main>
   )
 }
