@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import Image from 'next/image'
 
-import './Services.scss'
+import './ServicesSection.scss'
 
 interface Props {
     servicesData: {
@@ -23,7 +23,9 @@ const ServicesSection = ({ servicesData }: Props) => {
 
     return (
         <div className="Services">
-            <Title title={title} />
+            <div className="Services__Title">
+                <Title title={title} />
+            </div>
             {cardsArray.map((card: any, index: number) => {
                 const { title, text, text_link, image } = card;
 
