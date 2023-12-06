@@ -1,15 +1,37 @@
 import React from 'react'
 import Title from '../Title/Title'
-import Button from '../CtaButton/CtaButton'
+import Link from 'next/link';
 
-const ServicesSection = () => {
-    return (
-        <>
-            <Title title="Services" />
-            <div>ServicesSection</div>
-            <Button />
-        </>
-    )
+interface Props {
+    servicesData: {
+        title: string | null;
+        cards: {
+            map: Function;
+        }
+    }
 }
 
-export default ServicesSection
+const ServicesSection = ({ servicesData }: Props) => {
+    const { title, cards } = servicesData
+    const cardsArray = Object.values(cards);
+
+    return (
+        <>
+            <Title title={title} />
+            {cardsArray.map((card: any, index: number) => {
+                const { title, text, text_link } = card;
+                const linkUrl = title?.toLowerCase();
+
+                return (
+                    <div className="ServicesSection__Card" key={index}>
+                        <h3 className="ServicesSection__CardTitle">{title}</h3>
+                        <div className="ServicesSection__CardText">{text}</div>
+                        <Link href={linkUrl}>{text_link}</Link>
+                    </div>
+                );
+            })}
+        </>
+    );
+}
+
+export default ServicesSection;

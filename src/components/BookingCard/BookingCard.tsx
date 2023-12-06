@@ -1,8 +1,12 @@
 import React from 'react'
 
-const BookingCard = () => {
+interface Props {
+    title: string | null;
+}
+
+const BookingCard = ({ title }: Props) => {
     return (
-        <div>BookingCard</div>
+        <div>{title}</div>
     )
 }
 

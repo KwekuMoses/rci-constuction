@@ -1,12 +1,12 @@
 import React from 'react';
-
+import './Title.scss';
 type TitleProps = {
-    title: string;
+    title: string | null;
 };
 
 const Title = ({ title }: TitleProps) => {
     return (
-        <div>{title}</div>
+        <div className="Title">{title}</div>
     );
 };
 

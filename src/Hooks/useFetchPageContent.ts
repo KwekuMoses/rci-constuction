@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from 'react';
 import { fetchPageContent } from '@/utils/fetchContent';
 import { SimpleCache } from './useCache';

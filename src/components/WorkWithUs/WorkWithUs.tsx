@@ -1,8 +1,22 @@
 import React from 'react'
 
-const WorkWithUs = () => {
+interface Props {
+    careerData: {
+        title: string | null;
+        text: string | null;
+        read_more: string | null;
+    };
+}
+
+const WorkWithUs = ({ careerData }: Props) => {
+    const { title, text, read_more } = careerData
+
     return (
-        <div>WorkWithUs</div>
+        <div>
+            <h2>{title}</h2>
+            <p>{text}</p>
+            <a href="/">{read_more}</a>
+        </div>
     )
 }
 

@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react'
 
 import Image from 'next/image'
@@ -10,25 +8,27 @@ import { poppins } from '../../Styles/fonts';
 
 import './Hero.scss';
 
-import useFetchPageContent from '@/Hooks/useFetchPageContent';
+// import useFetchPageContent from '@/Hooks/useFetchPageContent';
 import useDynamicHeroHeight from '@/Hooks/useDynamicHeroHeight';
 import { extractImageUrl } from '@/utils/extractImageUrl';
 
-const Hero = () => {
-    const homePageId = 11
-    const { pagesData, isLoading } = useFetchPageContent(homePageId);
-    const { heroHeight, headerHeight } = useDynamicHeroHeight('#Header');
-    if (isLoading || !pagesData) {
-        return <div>Loading...</div>;
-    }
+interface Props {
+    heroData: {
+        imageUrl: string | null;
+        title: string;
+        tagline: string;
+        subtitle: string;
 
-    const pageContent = Array.isArray(pagesData) ? pagesData[0] : pagesData;
-    const imageUrl = pageContent ? extractImageUrl(pageContent.content.rendered) : null;
+    }
+}
+
+const Hero = ({ heroData }: Props) => {
+    const { imageUrl } = heroData
 
     return (
-        <div className={`Hero ${poppins.className}`} style={{ height: heroHeight }}>
+        <div className={`Hero ${poppins.className}`}>
             <div className="Hero__TextWrapper">
-                {pagesData && <HeroText pagesData={pageContent} />}
+                <HeroText heroData={heroData} />
             </div>
             {imageUrl && (
                 <Image
