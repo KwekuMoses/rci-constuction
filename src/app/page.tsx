@@ -1,9 +1,8 @@
 import Hero from '../components/Hero/Hero'
 import Introduction from '../components/Introduction/Introduction'
 import ServicesSection from '../components/ServicesSection/ServicesSection'
-import CustomerQuoteSection from '../components/CustomerQuote/CustomerQuote'
+import CustomerQuote from '../components/CustomerQuote/CustomerQuote'
 import BookingSection from '../components/BookingSection/BookingSection'
-// import LogoSection from '../components/LogoSection/LogoSection'
 import WorkWithUs from '../components/WorkWithUs/WorkWithUs'
 import CustomMarquee from '../components/CustomMarquee/CustomMarquee'
 import { fetchData } from '../utils/fetchData'
@@ -22,7 +21,6 @@ export default async function Home() {
   const logoData = homePageData.acf.logos
   const careerData = homePageData.acf.career_note
 
-
   return (
     <div className={styles.Home}>
       <Hero heroData={heroData} />
@@ -31,7 +29,7 @@ export default async function Home() {
       <div className={styles.ButtonWrapper}>
         <SecondaryButton buttonData={buttonData} />
       </div>
-      <CustomerQuoteSection socialProofData={socialProofData} />
+      <CustomerQuote socialProofData={socialProofData} />
       <BookingSection bookingData={bookingData} />
       <CustomMarquee logoData={logoData} />
       <WorkWithUs careerData={careerData} />

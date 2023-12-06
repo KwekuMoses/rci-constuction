@@ -1,7 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 
-import './CustomerQuoteSection.scss'
+import './CustomerQuote.scss'
+
+
 interface Props {
     socialProofData: {
         image: string | null;
@@ -13,18 +15,19 @@ interface Props {
 
 const CustomerQuoteSection = ({ socialProofData }: Props) => {
     const { image, quote, company, person } = socialProofData
+
     return (
-        <>
-            <div className="CustomerQuoteSection__Image">
+        <div className="CustomerQuote">
+            <div className="CustomerQuote__ImageWrapper">
                 {image && (
-                    <Image src={image} alt="Customer Image" layout='fill' objectFit='cover' />
+                    <Image className='CustomerQuote__Image' src={image} alt="Customer Image" layout='fill' objectFit='none' />
                 )}
 
             </div>
-            <div className="CustomerQuoteSection__Quote">{quote}</div>
-            <div className="CustomerQuoteSection__Company">{company}</div>
-            <div className="CustomerQuoteSection__Person">{person}</div>
-        </>
+            <div className="CustomerQuote__Quote">{quote}</div>
+            <div className="CustomerQuote__Company">{company}</div>
+            <div className="CustomerQuote__Person">{person}</div>
+        </div>
 
     )
 }
