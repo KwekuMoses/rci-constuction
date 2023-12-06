@@ -29,7 +29,13 @@ const ServicesSection = ({ servicesData }: Props) => {
 
                 const linkUrl = title?.toLowerCase();
 
-                const text_link_formatted = text_link?.toLowerCase();
+
+                function capitalizeFirstLetter(string: string) {
+                    if (!string) return '';
+                    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+                }
+
+                const text_link_formatted = capitalizeFirstLetter(text_link);
 
                 return (
                     <div className="Services__Card" key={index}>
