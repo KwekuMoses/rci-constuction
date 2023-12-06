@@ -1,4 +1,3 @@
-import Header from '../components/Header/Header'
 import Hero from '../components/Hero/Hero'
 import Introduction from '../components/Introduction/Introduction'
 import ServicesSection from '../components/ServicesSection/ServicesSection'
@@ -7,7 +6,6 @@ import BookingSection from '../components/BookingSection/BookingSection'
 // import LogoSection from '../components/LogoSection/LogoSection'
 import WorkWithUs from '../components/WorkWithUs/WorkWithUs'
 import CustomMarquee from '../components/CustomMarquee/CustomMarquee'
-import Footer from '../components/Footer/Footer'
 import { fetchData } from '../utils/fetchData'
 import SecondaryButton from '@/components/SecondaryButton/SecondaryButton'
 
