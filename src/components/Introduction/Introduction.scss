@@ -1,11 +1,12 @@
 @import '../../Styles/variables';
 
 
-.TaglineSection {
+.Introduction {
 	&__Title {
 		font-size: 1.3rem;
 		text-align: center;
         margin-top: $sectionMarginMedium;
+		margin-bottom: $titleMarginBottom;
 	}
 
 	&__Description {

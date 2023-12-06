@@ -1,4 +1,5 @@
 import React from 'react'
+import Title from '../Title/Title'
 
 import './Introduction.scss';
 
@@ -9,15 +10,17 @@ interface Props {
     }
 }
 
-const TaglineSection = ({ introductionData }: Props) => {
+const Introduction = ({ introductionData }: Props) => {
     const { title, text } = introductionData
 
     return (
-        <div className="TaglineSection">
-            <h2 className="TaglineSection__Title">{title}</h2>
-            <div className="TaglineSection__Description">{text}</div>
+        <div className="Introduction">
+            <div className="Introduction__Title">
+                <Title title={title}></Title>
+            </div>
+            <div className="Introduction__Description">{text}</div>
         </div>
     )
 }
 
-export default TaglineSection
+export default Introduction
