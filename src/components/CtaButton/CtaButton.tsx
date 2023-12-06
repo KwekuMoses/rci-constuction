@@ -11,7 +11,6 @@ interface Props {
 
 const CtaButton = ({ link, width }: Props) => {
 
-
     return (
         <Link href={`${link}`} className={`Button ${dm_sans_buttons.className} ${width === "full" ? "full-width" : ""}`}>Boka konsultation</Link>
     )

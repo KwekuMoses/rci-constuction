@@ -1,42 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import './NavigationLinks.scss';
 import { isActiveLink } from '@/utils/routeHelpers';
-import useFetchPageContent from '@/Hooks/useFetchPageContent';
+import { parseNavigationHTML } from '@/utils/parseNavigationHTML'; // Import the utility function
+
+
 
 interface Props {
     isMobile: boolean;
+    servicesData: {};
+    navigationData: [{
+        content: {
+            rendered: string
+        }
+    }] | {};
 }
 
-const NavigationLinks = (
-    // { isMobile }: Props
-) => {
-// const { pagesData, isLoading } = useFetchPageContent();
-// const pathname = usePathname();
+const NavigationLinks = ({ isMobile, servicesData, navigationData }: Props) => {
 
-    // if (isLoading) {
-    //     return <div>Loading...</div>;
-    // }
+    const pathname = usePathname();
 
-    // // Check if pagesData is an array and sort if it is
-    // const sortedPages = Array.isArray(pagesData)
-    //     ? [...pagesData].sort((a, b) => a.menu_order - b.menu_order)
-    //     : [];
 
-    const isMobile = false
+    const navigationDataString = Array.isArray(navigationData) && navigationData[0]?.content?.rendered
+        ? navigationData[0].content.rendered
+        : '';
+
+
+    const links = navigationDataString
+        ? parseNavigationHTML(navigationDataString)
+        : [];
+
 
     return (
         <div className={`NavigationLinks NavigationLinks--${isMobile ? "Mobile" : "Desktop"}`}>
-            {/* {sortedPages.map(({ menu_order, title }) => (
+            {links.map(({ label, id }) => (
                 <Link
-                    className={`NavigationLinks__Link ${isActiveLink(pathname, title.rendered)}`}
-                    href={title.rendered}
-                    key={menu_order}
+                    className={`NavigationLinks__Link ${isActiveLink(pathname, label)}`}
+                    href={`/${label.toLocaleLowerCase()}`}
+                    key={id}
                 >
-                    {title.rendered}
+                    {label}
                 </Link>
-            ))} */}
+            ))}
         </div>
     );
 }

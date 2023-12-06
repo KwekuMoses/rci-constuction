@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
-import { fetchServiceData } from '@/utils/fetchData'
+import { fetchServiceData, fetchNavigationData } from '@/utils/fetchData'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,12 +20,13 @@ export default async function RootLayout({
 
 
   const servicesData = await fetchServiceData()
+  const navigationData = await fetchNavigationData()
 
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        <Header servicesData={servicesData} navigationData={navigationData} />
         {children}
         <Footer servicesData={servicesData} />
       </body>

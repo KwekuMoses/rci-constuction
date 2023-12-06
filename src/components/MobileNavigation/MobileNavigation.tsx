@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import NavigationLinks from '../NavigationLinks/NavigationLinks';
@@ -6,16 +7,17 @@ import CtaButton from '../CtaButton/CtaButton';
 
 interface Props {
     isMobile: boolean;
+    servicesData: {};
+    navigationData: {};
+    isOpen: boolean;
+    setIsOpen: (isOpen: boolean) => void;
 }
 
-const MobileNavigation = ({ isMobile }: Props) => {
-    const [isOpen, setIsOpen] = useState(false);
+const MobileNavigation = ({ isMobile, servicesData, navigationData, isOpen, setIsOpen }: Props) => {
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-
-
 
     return (
         <div className="MobileNavigation">
@@ -25,7 +27,7 @@ const MobileNavigation = ({ isMobile }: Props) => {
                 <div className="BurgerLine"></div>
             </div>
             <div className={`MobileNavigation__MobileMenu ${isOpen ? 'open' : ''}`}>
-                {/* <NavigationLinks isMobile={isMobile} /> */}
+                <NavigationLinks isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} />
                 <div className="MobileNavigation__CtaButton">
                     {/* <CtaButton /> */}
                 </div>
