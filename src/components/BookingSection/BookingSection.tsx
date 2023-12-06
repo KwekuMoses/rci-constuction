@@ -3,6 +3,8 @@ import Title from '../Title/Title';
 import Button from '../CtaButton/CtaButton';
 import BookingCardSection from '../BookingCardSection/BookingCardSection';
 
+import './BookingSection.scss';
+
 interface Props {
     bookingData: {
         title: string | null;
@@ -20,19 +22,20 @@ const BookingSection = ({ bookingData }: Props) => {
     return (
         <>
             <Title title={title} />
-            <div>BookingSection</div>
-            {cardsArray.map((card, index) => {
-                const { title: cardTitle, text: cardText, icon: cardIcon } = card;
-                return (
-                    <BookingCardSection
-                        key={index}
-                        title={cardTitle || "Default Title"} // Providing a default title
-                        text={cardText}
-                        icon={cardIcon}
-                    />
-                );
-            })}
-            <Button />
+            <div className="BookingSection__CardWrapper">
+                {cardsArray.map((card, index) => {
+                    const { title: cardTitle, text: cardText, icon: cardIcon } = card;
+                    return (
+                        <BookingCardSection
+                            key={index}
+                            title={cardTitle || "RCI BYGG"} // Providing a default title
+                            text={cardText}
+                            icon={cardIcon}
+                        />
+                    );
+                })}
+            </div>
+            <Button link="/kontakta-oss" />
         </>
     );
 }
