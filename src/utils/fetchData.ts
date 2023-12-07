@@ -4,11 +4,11 @@ import 'server-only'
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 
 export const preloadHomeData = (id: number) => {
-    void fetchHomeData(id)
+    void fetchPageData(id)
 }
 
 
-export const fetchHomeData = cache(async (id: number) => {
+export const fetchPageData = cache(async (id: number) => {
     const res = await fetch(`${BASE_URL}/pages/${id}`)
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
@@ -69,3 +69,4 @@ export const fetchProjectsData = cache(async (id: number | string) => {
         // throw error;
     }
 });
+

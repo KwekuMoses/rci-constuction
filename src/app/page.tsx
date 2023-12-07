@@ -5,7 +5,7 @@ import CustomerQuote from '../components/CustomerQuote/CustomerQuote'
 import BookingSection from '../components/BookingSection/BookingSection'
 import CareerNote from '../components/CareerNote/CareerNote'
 import CustomMarquee from '../components/CustomMarquee/CustomMarquee'
-import { fetchHomeData } from '../utils/fetchData'
+import { fetchPageData } from '../utils/fetchData'
 import SecondaryButton from '@/components/SecondaryButton/SecondaryButton'
 import DesktopMarquee from '@/components/DesktopMarquee/DesktopMarquee'
 import styles from './page.module.css'
@@ -13,7 +13,7 @@ import Footer from '@/components/Footer/Footer'
 
 export default async function Home() {
   const homePageId = 11
-  const homePageData = await fetchHomeData(homePageId)
+  const homePageData = await fetchPageData(homePageId)
   const heroData = homePageData.acf.hero
   const introductionData = homePageData.acf.introduction
   const servicesData = homePageData.acf.services
