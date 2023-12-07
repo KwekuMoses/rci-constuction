@@ -1,0 +1,74 @@
+@import '../../Styles/variables.scss';
+
+$columnWidth: 100%;
+$xlBreakpoint: 1300px;
+$gridGap: 12px;
+
+.About {
+    margin-top: $headerHeight * 2;
+
+    &__Description {
+        width: clamp(250px, 400px, 90vw);
+        margin: 0 auto;
+        text-align: justify;
+    } 
+
+    &__ImageContainer {
+		width: $columnWidth;
+		display: grid;
+		grid-gap: $gridGap;
+        grid-template-rows: repeat(2, 1fr);
+		place-content: center;
+		height: max-content;
+		margin-top: 96px;
+		margin-bottom: 96px;
+
+		p {
+			margin: 0;
+		}
+
+		h3 {
+			margin: 0;
+		}
+		@media (max-width: $mediumScreens) {
+			grid-template-columns: unset;
+			grid-auto-flow: row;
+			margin-bottom: 36px;
+		}
+	}
+
+	&__Row {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		position: relative;
+		width: 80vw;
+		height: max-content;
+		grid-gap: $gridGap;
+
+		&--First {
+			grid-template-columns: 2fr 3fr;
+		}
+
+		&--Second {
+			grid-template-columns: 2fr 1fr;
+		}
+
+		@media(max-width: $sMediumScreens) {
+			grid-auto-flow: row;
+			grid-template-columns: unset;
+		}
+	}	
+
+    &__Image {
+		width: $columnWidth;
+		height: 250px;
+		position: relative;
+
+        @media(min-width: $xlBreakpoint) {
+            height: 300px;
+        }
+	}
+
+
+
+}

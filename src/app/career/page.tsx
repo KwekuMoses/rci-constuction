@@ -4,7 +4,7 @@ import Title from '@/components/Title/Title'
 
 import Image from 'next/image'
 
-import './CareerPage.scss'
+import './page.scss'
 
 const page = async () => {
     const careerPageData = await fetchPageData(9)
