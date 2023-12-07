@@ -1,7 +1,7 @@
 @import "../../Styles/variables";
 
 .Projects {
-	margin-top: 140px;
+	margin-top: $headerHeight * 2;
 	margin-bottom: 200px;
     a {
         text-decoration: none;

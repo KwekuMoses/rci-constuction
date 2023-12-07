@@ -1,15 +1,15 @@
-import ServicePage from '@/components/ServicePage/ServicePage'
+import ProjectPage from '@/components/ProjectPage/ProjectPage'
 import React from 'react'
 
 
 
 const page = () => {
-    const tyresöWpId = 151
+    const tyresöWpId = 210
+    const title = "Tyresö"
 
     return (
         <>
-            <p>Tyresö</p>
-            {/* <ServicePage id={tyresöWpId} /> */}
+            <ProjectPage id={tyresöWpId} title={title} />
         </>
     )
 }
