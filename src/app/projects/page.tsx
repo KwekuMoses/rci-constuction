@@ -22,7 +22,6 @@ type ProjectsData = Project[];
 
 const Page = async () => {
     const projectsData: ProjectsData = await fetchProjectsData();
-    console.log(projectsData);
 
     return (
         <div className="Projects">
@@ -43,7 +42,6 @@ const Page = async () => {
                                         fill={true}
                                         style={{ objectFit: "cover" }}
                                         priority={true}
-
                                     />
                                 </div>
                                 <div className="Projects__ProjectTitle">
@@ -52,7 +50,6 @@ const Page = async () => {
 
                             </div>
                         </Link>
-
                     ) : null
                 ))
                 }
