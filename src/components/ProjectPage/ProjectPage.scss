@@ -1,0 +1,86 @@
+@import "../../Styles/variables.scss";
+
+$columnWidthSmall: clamp(300px, 60vw, 90vw);
+$columnWidthMedium: 360px;
+$xlBreakpoint: 1300px;
+$gridGap: 18px;
+
+.ProjectPage {
+	margin-top: $headerHeight * 2;
+
+	&__Title {
+	}
+
+	&__Description {
+		text-align: center;
+		margin: 0 auto;
+		width: 500px;
+		max-width: 90vw;
+	}
+
+	&__Container {
+		display: grid;
+		place-content: center;
+		grid-gap: $gridGap;
+		margin-top: 50px;
+		margin-bottom: $sectionMarginMedium;
+
+		@media (min-width: $mediumScreens) {
+			grid-template-columns: repeat(2, 1fr);
+			width: max-content;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__Column {
+		width: $columnWidthSmall;
+		display: grid;
+		grid-gap: $gridGap;
+		max-width: 90vw;
+		grid-template-rows: repeat(3, max-content);
+
+		p {
+			margin: 0;
+		}
+
+		h3 {
+			margin: 0;
+		}
+		@media (max-width: $mediumScreens) {
+			grid-template-columns: unset;
+			grid-auto-flow: row;
+			margin-bottom: 36px;
+		}
+
+		@media (min-width: $sMediumScreens) {
+			width: $columnWidthMedium;
+			place-self: center;
+		}
+
+		&--left {
+			@media (min-width: $sMediumScreens) {
+				margin-top: 100px;
+			}
+		}
+
+		&--right {
+			@media (min-width: $sMediumScreens) {
+			}
+		}
+	}
+
+	&__Image {
+		width: $columnWidthSmall;
+		height: 250px;
+		position: relative;
+
+		@media (min-width: $sMediumScreens) {
+			width: $columnWidthMedium;
+		}
+
+		@media (min-width: $xlBreakpoint) {
+			height: 300px;
+		}
+	}
+}
