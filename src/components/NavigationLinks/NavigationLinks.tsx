@@ -3,9 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import './NavigationLinks.scss';
 import { isActiveLink } from '@/utils/routeHelpers';
-import { parseNavigationHTML } from '@/utils/parseNavigationHTML'; // Import the utility function
-
-
+import { parseNavigationHTML } from '@/utils/parseNavigationHTML';
 
 interface Props {
     isMobile: boolean;
