@@ -16,9 +16,6 @@ interface Props {
 }
 
 const ServiceShowcase = ({ showcase }: Props) => {
-
-    console.log(showcase)
-
     const { title, image_1, image_title_1, image_text_1, image_2, image_title_2, image_text_2 } = showcase
 
     return (
@@ -43,9 +40,6 @@ const ServiceShowcase = ({ showcase }: Props) => {
 }
 
 export default ServiceShowcase
-
-
-
 
 const image = (image: string) => {
     return (
