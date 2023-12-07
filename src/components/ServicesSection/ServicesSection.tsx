@@ -22,7 +22,7 @@ const ServicesSection = ({ servicesData }: Props) => {
 
 
     return (
-        <div className="ServiceSection">
+        <div className="ServiceSection" id="tjanster">
             <div className="ServiceSection__Title">
                 <Title title={title} />
             </div>

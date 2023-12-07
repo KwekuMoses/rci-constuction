@@ -22,6 +22,8 @@ export default async function RootLayout({
   const servicesData = await fetchServiceData()
   const navigationData = await fetchNavigationData()
 
+  console.log(navigationData)
+
 
   return (
     <html lang="en">

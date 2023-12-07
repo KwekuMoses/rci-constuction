@@ -26,16 +26,52 @@ const NavigationLinks = ({ isMobile, servicesData, navigationData }: Props) => {
     const links = navigationDataString
         ? parseNavigationHTML(navigationDataString)
         : [];
+    console.log(links)
+
+    const Links = [
+        {
+            page: 'Hem',
+            link: '/',
+            id: 1
+        },
+        {
+            page: 'Tjänster',
+            link: '/#tjanster',
+            id: 2
+        },
+        {
+            page: 'Våra Projekt',
+            link: '/vara-projekt',
+            id: 3
+        },
+        {
+            page: 'Karriär',
+            link: '/karriar',
+            id: 4
+        },
+
+        {
+            page: 'Om oss',
+            link: '/om-oss',
+            id: 3
+        },
+
+        {
+            page: 'Kontakt',
+            link: '/kontakt',
+            id: 4
+        },
+    ]
 
     return (
         <div className={`NavigationLinks NavigationLinks--${isMobile ? "Mobile" : "Desktop"}`}>
-            {links.map(({ label, id }) => (
+            {Links.map(({ page, link, id }) => (
                 <Link
-                    className={`NavigationLinks__Link ${isActiveLink(pathname, label)}`}
-                    href={`/${label.toLocaleLowerCase()}`}
+                    className={`NavigationLinks__Link ${isActiveLink(pathname, link)}`}
+                    href={`${link}`}
                     key={id}
                 >
-                    {label}
+                    {page}
                 </Link>
             ))}
         </div>

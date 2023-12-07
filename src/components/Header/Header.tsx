@@ -16,8 +16,6 @@ interface Props {
 }
 
 const Header = ({ servicesData, navigationData }: Props) => {
-    // const { width } = useWindowSize() || {};
-    // const isMobile = isMobileScreen(width ?? 0);
     const [isOpen, setIsOpen] = useState(false);
 
     useMakeHeaderSticky("Header", -70, isOpen);
