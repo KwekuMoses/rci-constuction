@@ -53,3 +53,13 @@ export const fetchServicesData = cache(async (id: number) => {
     return res.json()
 })
 
+export const fetchProjectsData = cache(async () => {
+    const res = await fetch(`${BASE_URL}/project`)
+
+    if (!res.ok) {
+        throw new Error('Failed to fetch data')
+    }
+
+    return res.json()
+})
+
