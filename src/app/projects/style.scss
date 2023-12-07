@@ -1,0 +1,53 @@
+@import "../../Styles/variables";
+
+.Projects {
+	margin-top: 140px;
+	margin-bottom: 200px;
+
+
+   
+
+	&__Title {
+		margin-bottom: 48px;
+	}
+
+    &__Wrapper {
+        display: grid;
+        grid-gap: 24px;
+        width: max-content;
+        margin: 0 auto;
+
+        @media(min-width: $mediumScreens) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media(min-width: $xlBreakpoint) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+	&__Project {
+        position: relative;
+        width: max-content;
+        height: max-content;
+	}
+
+	&__ImageWrapper {
+		position: relative;
+        width: 325px;
+        height: 325px;
+	}
+
+	&__ProjectTitle {
+		text-align: center;
+		background-color: black;
+		color: white;
+		position: relative;
+		display: grid;
+		place-content: center;
+		padding: 12px;
+
+		h2 {
+			margin: 0;
+		}
+	}
+}
