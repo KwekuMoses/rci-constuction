@@ -19,6 +19,8 @@ interface Props {
 
 const NavigationLinks = ({ isMobile, servicesData, navigationData }: Props) => {
 
+    console.log(navigationData)
+
     const pathname = usePathname();
 
 

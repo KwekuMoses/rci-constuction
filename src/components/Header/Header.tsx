@@ -26,9 +26,12 @@ const Header = ({ servicesData, navigationData }: Props) => {
 
     return (
         <div className="Header" id="Header">
-            <div className="Header__Column Logo"><Logo /></div>
-            <div className="Header__Column"><Navigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} /></div>
-
+            <div className="Header__Column Logo">
+                <Logo />
+            </div>
+            <div className="Header__Column Header__Nav">
+                <Navigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} />
+            </div>
             <div className="Header__Column">
                 {/* <Button /> */}
             </div>

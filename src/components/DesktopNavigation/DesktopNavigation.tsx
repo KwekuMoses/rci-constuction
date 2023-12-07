@@ -2,13 +2,15 @@ import React from 'react'
 import NavigationLinks from '../NavigationLinks/NavigationLinks'
 
 interface Props {
-    isMobile: boolean;
+    servicesData: {};
+    navigationData: {};
 }
 
-const DesktopNavigation = ({ isMobile }: Props) => {
+const DesktopNavigation = ({ servicesData, navigationData }: Props) => {
+    let isMobile = false
     return (
         <>
-            {/* <NavigationLinks isMobile={isMobile} /> */}
+            <NavigationLinks isMobile={isMobile} navigationData={navigationData} servicesData={servicesData} />
         </>
     )
 }

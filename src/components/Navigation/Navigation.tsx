@@ -21,9 +21,11 @@ interface Props {
 const Navigation = ({ isMobile, servicesData, navigationData, setIsOpen, isOpen }: Props) => {
     return (
         <div className="Navigation">
-            <MobileNavigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} />
+            <div className="Navigation__Mobile">
+                <MobileNavigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} />
+            </div>
             <div className="Navigation__Desktop">
-                {/* <DesktopNavigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} /> */}
+                <DesktopNavigation servicesData={servicesData} navigationData={navigationData} />
             </div>
 
         </div>

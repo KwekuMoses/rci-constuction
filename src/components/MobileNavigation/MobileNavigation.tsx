@@ -29,7 +29,7 @@ const MobileNavigation = ({ isMobile, servicesData, navigationData, isOpen, setI
             <div className={`MobileNavigation__MobileMenu ${isOpen ? 'open' : ''}`}>
                 <NavigationLinks isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} />
                 <div className="MobileNavigation__CtaButton">
-                    {/* <CtaButton /> */}
+                    <CtaButton link={`/`} width="full" />
                 </div>
             </div>
         </div>

@@ -1,7 +1,18 @@
+@import '../../Styles/variables.scss';
+
 .Navigation {
 
+    &__Mobile {
+        @media(min-width: $mediumScreens) {
+            display: none;
+        }
+    }
+
     &__Desktop {
-        display: none;
+
+        @media (max-width: $mediumScreens) {
+            display: none;
+        }
     }
 
 }

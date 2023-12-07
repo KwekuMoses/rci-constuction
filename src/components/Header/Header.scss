@@ -13,6 +13,21 @@
 	min-width: 300px;
 	transition: top 0.3s ease-in-out;
 
+	@media (min-width: $mediumScreens) {
+			grid-template-columns: repeat(3,1fr);
+			grid-auto-flow: column;
+		}
+
+		&__Nav {
+			grid-column: 2;
+			width: max-content;
+			display: grid;
+			align-content: center;
+
+		}
+		
+		
+
 	.MobileNav {
 		@media (min-width: 768px) {
 			display: none;

@@ -1,13 +1,14 @@
 @import "../../Styles/variables.scss";
 @import "../../Styles/mixins.scss";
 
-.Button {
+.CtaButton {
     @include cta-button;
     position: relative;
     display: block;
     margin: 0 auto;
 
-    .full-width {
-        width: 100%;
-    }
+}
+
+.fullWidth {
+    width: 100%;
 }
