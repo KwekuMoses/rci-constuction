@@ -23,7 +23,7 @@ const Navigation = ({ isMobile, servicesData, navigationData, setIsOpen, isOpen 
         <div className="Navigation">
             <MobileNavigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} />
             <div className="Navigation__Desktop">
-                <DesktopNavigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} />
+                {/* <DesktopNavigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} /> */}
             </div>
 
         </div>
