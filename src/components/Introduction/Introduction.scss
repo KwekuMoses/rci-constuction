@@ -1,18 +1,33 @@
-@import '../../Styles/variables';
-
+@import "../../Styles/variables";
 
 .Introduction {
+	margin: 0 auto;
+	width: 86vw;
+
+	@media (min-width: $mediumScreens) {
+		width: clamp(600px, 70vw, 1100px);
+	}
 	&__Title {
-		font-size: 1.3rem;
 		text-align: center;
-        margin-top: $sectionMarginMedium;
+		margin-top: $sectionMarginMedium;
 		margin-bottom: $titleMarginBottom;
+		min-width: max-content;
+
+		@media(min-width: $mediumScreens) {
+			margin-top: $sectionMarginLarge;
+		}
 	}
 
 	&__Description {
 		max-width: 100%;
 		text-align: center;
-		padding: 0 24px;
-        margin-bottom: $sectionMarginMedium;
+		// padding: 0 24px;
+		margin-bottom: $sectionMarginMedium;
+		font-size: $paragraphFontSize;
+
+		@media(min-width: $mediumScreens) {
+			margin-bottom: $sectionMarginLarge;
+
+		}
 	}
 }

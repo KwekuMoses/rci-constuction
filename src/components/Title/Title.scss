@@ -2,9 +2,16 @@
 
 
 .Title {
-    font-size: 1.3rem;
     text-align: center;
-    margin-top: $sectionMarginMedium;
-    margin-bottom: $titleMarginBottom;
     font-weight: bold;
+    font-size: 1.35rem;
+    max-width: 90vw;
+    margin: 0 auto;
+    margin-bottom: $titleMarginBottom;
+
+
+    @media(min-width: $mediumScreens) {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+
+    }
 }

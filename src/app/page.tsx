@@ -7,6 +7,7 @@ import CareerNote from '../components/CareerNote/CareerNote'
 import CustomMarquee from '../components/CustomMarquee/CustomMarquee'
 import { fetchHomeData } from '../utils/fetchData'
 import SecondaryButton from '@/components/SecondaryButton/SecondaryButton'
+import DesktopMarquee from '@/components/DesktopMarquee/DesktopMarquee'
 import styles from './page.module.css'
 import Footer from '@/components/Footer/Footer'
 
@@ -33,6 +34,7 @@ export default async function Home() {
       <CustomerQuote socialProofData={socialProofData} />
       <BookingSection bookingData={bookingData} />
       <CustomMarquee logoData={logoData} />
+      <DesktopMarquee logoData={logoData} />
       <CareerNote careerData={careerData} />
     </main>
   )

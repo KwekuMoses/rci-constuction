@@ -8,9 +8,11 @@
     background:#e3e3e3;
     padding: 12px;
     text-align: center;
-    border: 1px solid black;
+    // border: 1px solid black;
+    box-shadow: $cardShadow;
     margin-bottom: $sectionMarginMedium;
     border-radius: 12px;
+    max-width: 400px;
 	&__Title {
 	}
 	&__Text {

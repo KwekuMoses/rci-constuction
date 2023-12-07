@@ -5,10 +5,17 @@ $white: #fff;
 
 $headerHeight: 70px;
 
+$largeScreens: 1024px;
 $mediumScreens: 768px;
+$sMediumScreens: 600px;
 
 $sectionMarginMedium:86px; 
-$titleMarginBottom: 18px;
+$sectionMarginLarge: $sectionMarginMedium * 2;
+
+$titleMarginBottom: 24px;
 $cardShadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
 
 $card-width-s: 86vw;
+
+$paragraphFontSize: clamp(1rem, 1.3vw, 1.5rem);
+

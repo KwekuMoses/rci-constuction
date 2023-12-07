@@ -22,8 +22,8 @@ const ServicesSection = ({ servicesData }: Props) => {
 
 
     return (
-        <div className="Services">
-            <div className="Services__Title">
+        <div className="ServiceSection">
+            <div className="ServiceSection__Title">
                 <Title title={title} />
             </div>
             {cardsArray.map((card: any, index: number) => {
@@ -40,13 +40,13 @@ const ServicesSection = ({ servicesData }: Props) => {
                 const text_link_formatted = capitalizeFirstLetter(text_link);
 
                 return (
-                    <div className="Services__Card" key={index}>
-                        <div className="Services__CardImageWrapper">
+                    <div className="ServiceSection__Card" key={index}>
+                        <div className="ServiceSection__CardImageWrapper">
                             <Image src={image} alt={title} layout="fill" quality={100} objectFit="cover" loading="lazy" />
                         </div>
-                        <h3 className="Services__CardTitle">{title}</h3>
-                        <div className="Services__CardText">{text}</div>
-                        <Link className="Services__CardLink" href={linkUrl}>{text_link_formatted}</Link>
+                        <h3 className="ServiceSection__CardTitle">{title}</h3>
+                        <div className="ServiceSection__CardText">{text}</div>
+                        <Link className="ServiceSection__CardLink" href={linkUrl}>{text_link_formatted}</Link>
                     </div>
                 );
             })}

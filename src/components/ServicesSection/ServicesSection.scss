@@ -1,12 +1,24 @@
 @import "../../Styles/variables.scss";
 
-.Services {
+.ServiceSection {
 	display: grid;
 	justify-items: center;
+	width: 90vw;
+	margin: 0 auto;
+	max-width: fit-content;
 
 	@media (min-width: $mediumScreens) {
+		grid-gap: 12px;
+	}
+	@media (min-width: $largeScreens) {
+		grid-gap: 24px;
+	}
+
+	@media (min-width: $largeScreens) {
 		grid-auto-flow: column;
 		grid-template-rows: max-content 1fr;
+		max-width: fit-content;
+		margin: 0 auto;
 	}
 
 	&__Title {
@@ -25,11 +37,12 @@
 		display: grid;
 		grid-auto-flow: row;
 		grid-template-rows: 288px max-content max-content;
-		min-width: 250px;
+		min-width: 270px;
+		max-width: 400px;
 
-		@media (min-width: $mediumScreens) {
+		@media (min-width: $largeScreens) {
 			grid-row: 2;
-			margin: 0 12px;
+			max-width: 400px;
 		}
 
 		&ImageWrapper {
@@ -54,7 +67,8 @@
 			padding: 24px 18px 24px 18px;
 			color: black;
 			font-weight: bold;
-			justify-self: end;
+			display: grid;
+			place-content: end;
 
 			&:visited {
 				color: inherit;

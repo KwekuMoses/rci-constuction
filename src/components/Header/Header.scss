@@ -3,7 +3,6 @@
 .Header {
 	display: grid;
 	grid-auto-flow: column;
-	place-items: center;
 	justify-content: space-around;
 	background-color: $grey;
 	height: $headerHeight;
@@ -31,9 +30,10 @@
 
 	@media (min-width: 768px) {
 		.Logo {
-			position: relative;
-			left: unset;
-			top: unset;
+			// position: relative;
+			// left: unset;
+			// top: unset;
+			margin-left: 32px;
 		}
 	}
 }

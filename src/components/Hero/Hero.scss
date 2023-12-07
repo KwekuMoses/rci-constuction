@@ -1,26 +1,28 @@
-@import '../../Styles/variables.scss';
+@import "../../Styles/variables.scss";
 
 .Hero {
-    width: auto;
-    height: 100vh;
-    position: relative;
-    margin-top: $headerHeight;
-    display: grid;
-    place-content: center;
+	width: auto;
+	height: 100vh;
+	position: relative;
+	margin-top: $headerHeight;
+	display: grid;
+	place-content: center;
 
-   
-    &__TextWrapper {
-        margin-bottom: 200px;
-    }
+	@media (min-width: $largeScreens) {
+		justify-content: start;
+		padding-left: 100px;
+	}
 
-    &__Overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48))
-    }
+	&__TextWrapper {
+		margin-bottom: 100px;
+	}
 
- 
+	&__Overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48));
+	}
 }

@@ -1,32 +1,35 @@
 @import "../../Styles/variables.scss";
 
 .BookingCard {
-    box-shadow: $cardShadow;
-    max-width: $card-width-s;
-    margin-bottom: 36px;
-    position: relative;
-    padding-bottom: 36px;
+	box-shadow: $cardShadow;
+	max-width: 400px;
+	margin-bottom: 36px;
+	position: relative;
+	padding-bottom: 36px;
 
-    &__IconWrapper {
-        position: relative;
-    }
- 
+	&__IconWrapper {
+		position: relative;
+		display: grid;
+		justify-content: center;
+	}
+
 	&__Icon {
 		width: 24px;
 		height: 24px;
-        color:black;
-        padding: 12px;
-        border-radius: 50%;
-        background: rgb(224, 224, 224);
-        margin: 12px 0 0 12px;
+		color: black;
+		padding: 12px;
+		border-radius: 50%;
+		background: rgb(224, 224, 224);
+		margin: 12px 0 0 12px;
 	}
 
-    &__Title {
-        padding: 0 18px;
+	&__Title {
+		padding: 0 18px;
+		text-align: center;
+	}
 
-    }
-	
-    &__Text {
-        padding: 0 18px;
-    }
+	&__Text {
+		padding: 0 18px;
+		text-align: center;
+	}
 }

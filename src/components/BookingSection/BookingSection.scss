@@ -1,9 +1,17 @@
+@import '../../styles/variables.scss';
+
 .BookingSection {
 
     &__CardWrapper {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         display: grid;
         place-content: center;
+
+        @media(min-width: $mediumScreens) {
+            grid-auto-flow: column;
+            grid-gap: 24px;
+        }
     }
 
 

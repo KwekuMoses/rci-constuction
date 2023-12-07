@@ -17,7 +17,7 @@ const HeroText = async ({ heroData }: Props) => {
     const { title, tagline, subtitle } = heroData
 
     return (
-        <div className={`HeroText `} >
+        <div className={`HeroText`} >
             <h1 className={`HeroText__Title ${dm_sans_bold.className}`}>{title}</h1>
             <p className={`HeroText__Paragraph  ${dm_sans_thin.className}`}>{tagline}</p>
             <h2 className={`HeroText__Subtitle  ${dm_sans_bold.className}`}>{subtitle}</h2>
