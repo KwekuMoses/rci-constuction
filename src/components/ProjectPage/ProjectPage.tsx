@@ -9,9 +9,9 @@ interface Props {
 
 
 const ProjectPage = async ({ id }: Props) => {
-    const servicesData = await fetchProjectsData(id)
-    const acfData = servicesData.acf.service
-    const { hero, intro, cards, quote_text, showcase, contact } = acfData
+    // const servicesData = await fetchProjectsData(id)
+    // const acfData = servicesData.acf.service
+    // const { hero, intro, cards, quote_text, showcase, contact } = acfData
 
     return (
         <div>
