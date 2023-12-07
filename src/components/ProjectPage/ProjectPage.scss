@@ -50,7 +50,6 @@ $gridGap: 18px;
 		@media (max-width: $mediumScreens) {
 			grid-template-columns: unset;
 			grid-auto-flow: row;
-			margin-bottom: 36px;
 		}
 
 		@media (min-width: $sMediumScreens) {
