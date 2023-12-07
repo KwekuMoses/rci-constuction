@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import './SecondaryButton.scss'
 interface Props {
     buttonData: string;
@@ -7,7 +8,7 @@ interface Props {
 const SecondaryButton = ({ buttonData }: Props) => {
     const text = buttonData
     return (
-        <div className="SecondaryButton">{text}</div>
+        <Link href="/projekt" className="SecondaryButton">{text}</Link>
     )
 }
 
