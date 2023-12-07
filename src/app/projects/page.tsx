@@ -15,6 +15,7 @@ interface Project {
         };
     };
     slug: string
+    id: number
 }
 
 type ProjectsData = Project[];
@@ -30,10 +31,10 @@ const Page = async () => {
             </div>
 
             <div className="Projects__Wrapper">
-                {projectsData.map((project, index) => (
+                {projectsData.map((project) => (
                     project.acf && project.acf.projects && project.acf.projects.featured_image ? (
                         <Link href={`/projects/${project.slug}`}>
-                            <div className="Projects__Project" key={index}>
+                            <div className="Projects__Project" key={project.id}>
                                 <div className="Projects__ImageWrapper">
                                     <Image
                                         className="Projects__ProjectImage"
