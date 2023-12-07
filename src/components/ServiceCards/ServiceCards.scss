@@ -6,7 +6,8 @@
 
 	&__Title {
 		text-align: center;
-		font-size: clamp(2rem, 3vw, 3.5rem);
+		font-size: $serviceTitle;
+		margin-top: 64px;
 	}
 
 	&__CardWrapper {
@@ -16,7 +17,7 @@
 		grid-gap: 36px;
 		justify-items: center;
 		align-items: center;
-        padding-bottom: 200px;
+        margin-bottom: 48px;
 
 		@media (min-width: $mediumScreens) {
 			grid-template-columns: repeat(2, 1fr);
@@ -32,4 +33,16 @@
 		padding: 12px;
 		box-shadow: $cardShadow;
 	}
+
+    &__ButtonWrapper {
+
+        width: 250px;
+        margin: 0 auto;
+
+        @media (min-width: $mediumScreens) {
+            width: 300px;
+            text-transform: uppercase;
+
+        }
+    }
 }

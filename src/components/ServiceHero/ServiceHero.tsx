@@ -12,14 +12,15 @@ interface Props {
 }
 
 const ServiceHero = ({ heroUrl, intro }: Props) => {
+
     return (
         <div className="ServiceHero">
             <div className="ServiceHero__TextWrapper">
                 <h1 className="ServiceHero__Title">{intro.service_title}</h1>
                 <p className="ServiceHero__Text">{intro.text}</p>
                 <span className="line"></span>
-
             </div>
+
             <Image
                 className="ServiceHero__Image"
                 src={heroUrl}

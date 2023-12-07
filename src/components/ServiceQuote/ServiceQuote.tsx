@@ -1,8 +1,14 @@
 import React from 'react'
+import './ServiceQuote.scss'
 
-const ServiceQuote = () => {
+interface Props {
+    quote: string
+}
+
+const ServiceQuote = ({ quote }: Props) => {
+
     return (
-        <div>ServiceQuote</div>
+        <span className="ServiceQuote">{quote}</span>
     )
 }
 
