@@ -1,0 +1,16 @@
+@import "../../Styles/variables.scss";
+
+.ContactSection {
+	display: block;
+	text-align: center;
+	margin-bottom: 248px;
+
+	&__Title {
+		font-size: $serviceTitle;
+		margin: 0;
+	}
+
+	&__Text {
+        margin-bottom: 32px;
+	}
+}
