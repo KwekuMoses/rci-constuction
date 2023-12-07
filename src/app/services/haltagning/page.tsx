@@ -3,7 +3,7 @@ import React from 'react'
 
 
 
-const page = async () => {
+const page = () => {
     const haltagningWpId = 151
 
     return (
