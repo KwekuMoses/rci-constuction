@@ -30,8 +30,8 @@ const Hero = ({ heroData }: Props) => {
                 <Image
                     src={imageUrl}
                     alt="Hero Image"
-                    layout='fill'
-                    objectFit='cover'
+                    fill={true}
+                    style={{ objectFit: "cover" }}
                     priority={true}
                 />
             )}

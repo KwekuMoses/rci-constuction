@@ -1,0 +1,55 @@
+@import "../../Styles/variables.scss";
+
+.ServiceHero {
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+	margin-top: $headerHeight;
+	display: grid;
+	align-items: center;
+
+	&__TextWrapper {
+		position: relative;
+		z-index: 100;
+		color: white;
+		width: clamp(300px, 500px, 90vw);
+		margin: 0 auto;
+		display: grid;
+
+		.line {
+			width: 48px;
+			height: 1px;
+			background: white;
+			margin: 1rem 0;
+			justify-self: center;
+			position: relative;
+			display: block;
+			justify-self: center;
+			
+		}
+	}
+
+	&__Title {
+		font-size: 3rem;
+		font-weight: 700;
+		text-align: center;
+	}
+
+    &__Text {
+        text-align: center;
+		margin: unset;
+    }
+
+	&__Image {
+		position: relative;
+	}
+
+	&__Overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $overlay;
+	}
+}

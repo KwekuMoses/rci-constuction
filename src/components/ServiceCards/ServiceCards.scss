@@ -1,0 +1,35 @@
+@import "../../Styles/variables.scss";
+
+.ServiceCards {
+	display: grid;
+	grid-auto-flow: row;
+
+	&__Title {
+		text-align: center;
+		font-size: clamp(2rem, 3vw, 3.5rem);
+	}
+
+	&__CardWrapper {
+		display: grid;
+		width: max-content;
+		margin: 0 auto;
+		grid-gap: 36px;
+		justify-items: center;
+		align-items: center;
+        padding-bottom: 200px;
+
+		@media (min-width: $mediumScreens) {
+			grid-template-columns: repeat(2, 1fr);
+            & > :first-child {
+                // margin-top: 200px;
+            }
+		}
+	}
+
+	&__Card {
+		border: 1px solid rgb(231, 231, 231);
+		width: 300px;
+		padding: 12px;
+		box-shadow: $cardShadow;
+	}
+}
