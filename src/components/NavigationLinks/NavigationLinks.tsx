@@ -19,20 +19,15 @@ interface Props {
 
 const NavigationLinks = ({ isMobile, servicesData, navigationData }: Props) => {
 
-    console.log(navigationData)
-
     const pathname = usePathname();
-
 
     const navigationDataString = Array.isArray(navigationData) && navigationData[0]?.content?.rendered
         ? navigationData[0].content.rendered
         : '';
 
-
     const links = navigationDataString
         ? parseNavigationHTML(navigationDataString)
         : [];
-
 
     return (
         <div className={`NavigationLinks NavigationLinks--${isMobile ? "Mobile" : "Desktop"}`}>
