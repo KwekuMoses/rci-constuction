@@ -1,41 +1,35 @@
 @import "../../Styles/variables.scss";
 
 .CareerPage {
-	margin-top: $headerHeight * 2;
+    margin-top: $headerHeight * 2;
 
-	&__Container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		width: clamp(600px, 900px, 90vw);
-		height: 500px;
-		padding: 0 10%;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-auto-flow: column;
-		margin: 0 auto;
-		margin-bottom: 200px;
-	}
+    &__Container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: clamp(600px, 900px, 90vw);
+        height: 500px;
+        margin: 0 auto;
+        margin-bottom: 200px;
 
-	&__ImageWrapper {
-		position: relative;
-		width: 100%;
-		height: 100%;
-	}
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; 
+			height: 1000px;
+			max-width: 90vw;
+        }
+    }
 
-	&__BoxLeft {
-		width: 100%;
-		height: 100%;
-	}
+    &__BoxLeft, &__BoxRight {
+        width: 100%;
+        height: 100%;
+    }
 
-	&__BoxRight {
-		background-color: black;
-		width: 100%;
-		height: 100%;
-		color: white;
+
+    &__BoxRight {
+        background-color: black;
+        color: white;
         display: grid;
         align-items: center;
+		position: relative;
 
         .line {
             width: 50px;
@@ -44,24 +38,30 @@
             margin: 0 auto;
         }
 
-		h2 {
-			text-align: center;
-            margin-top:0;
+        h2 {
+            text-align: center;
+            margin-top: 0;
             margin-bottom: 10px;
-		}
+        }
 
-		p {
-			text-align: center;
-			width: 80%;
-			margin-left: auto;
-			margin-right: auto;
-			white-space: pre-line;
+        p {
+            text-align: center;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            white-space: pre-line;
             margin-bottom: 0;
-		}
+        }
+    }
+
+	&__ImageWrapper {
+		position: relative;
+		width: 100%;
+		height: 100%; // Ensure the parent container of the Image has a defined height
 	}
 
-	&__TextWrapper {
-		display: grid;
-		align-content: center;
-	}
+    &__TextWrapper {
+        display: grid;
+        align-content: center;
+    }
 }
