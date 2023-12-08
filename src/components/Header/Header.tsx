@@ -5,9 +5,6 @@ import Navigation from '../Navigation/Navigation';
 import Button from '../CtaButton/CtaButton';
 import Logo from '../Logo/Logo';
 
-import { useWindowSize } from '@/Hooks/useWindowSize';
-import { isMobileScreen } from '@/utils/handleResponsive';
-
 import useMakeHeaderSticky from '@/utils/stickyHeader';
 
 interface Props {
@@ -28,7 +25,7 @@ const Header = ({ servicesData, navigationData }: Props) => {
                 <Logo />
             </div>
             <div className="Header__Column Header__Nav">
-                <Navigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} isOpen={isOpen} setIsOpen={setIsOpen} />
+                <Navigation isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} setIsOpen={setIsOpen} isOpen={isOpen} />
             </div>
             <div className="Header__Column">
                 {/* <Button /> */}
