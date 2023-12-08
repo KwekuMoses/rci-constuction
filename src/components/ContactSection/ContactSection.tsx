@@ -7,7 +7,7 @@ const ContactSection = () => {
         <div className="ContactSection">
             <h3 className="ContactSection__Title">Kontakta oss idag</h3>
             <p className="ContactSection__Text">Låt oss Bygga något bra tillsammans</p>
-            <CtaButton link={"/"} width="medium" />
+            <CtaButton width="medium" />
         </div>
     )
 }
