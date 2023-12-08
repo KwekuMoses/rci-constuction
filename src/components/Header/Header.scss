@@ -13,7 +13,7 @@
 	min-width: 300px;
 	transition: top 0.3s ease-in-out;
 
-	@media (min-width: $mediumScreens) {
+	@media (min-width: $largeScreens) {
 			grid-template-columns: repeat(3,1fr);
 			grid-auto-flow: column;
 		}
