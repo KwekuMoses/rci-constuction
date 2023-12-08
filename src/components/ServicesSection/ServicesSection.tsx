@@ -29,7 +29,13 @@ const ServicesSection = ({ servicesData }: Props) => {
             {cardsArray.map((card: any, index: number) => {
                 const { title, text, text_link, image } = card;
 
-                const linkUrl = title?.toLowerCase();
+                function replaceSwedishChars(string: string) {
+                    return string.replace(/å/gi, 'a')
+                        .replace(/ä/gi, 'a')
+                        .replace(/ö/gi, 'o');
+                }
+
+                const linkUrl = replaceSwedishChars(title?.toLowerCase() ?? "");
 
 
                 function capitalizeFirstLetter(string: string) {
