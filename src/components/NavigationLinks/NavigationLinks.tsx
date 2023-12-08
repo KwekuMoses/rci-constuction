@@ -27,7 +27,6 @@ const NavigationLinks = ({ isMobile, servicesData, navigationData, setIsOpen }: 
     const links = navigationDataString
         ? parseNavigationHTML(navigationDataString)
         : [];
-    console.log(links)
 
     const Links = [
         {
