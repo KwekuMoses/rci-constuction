@@ -1,0 +1,44 @@
+@import "../../Styles/variables.scss";
+
+.ContactPage {
+	margin-top: $headerHeight * 2;
+	margin-bottom: 200px;
+	.Form {
+		display: grid;
+		background-color: #f4f4f4;
+		margin: 0 auto;
+		padding: 25px;
+		box-shadow: $cardShadow;
+		width: clamp(300px, 40vw, 600px);
+
+		&__Title {
+			text-align: center;
+		}
+
+		&__Description {
+			text-align: center;
+		}
+
+		&__Input {
+			height: 25px;
+			margin-bottom: 12.5px;
+		}
+
+		&__Button {
+			background-color: $orange;
+			border: 1px solid orange;
+			padding: 12px;
+			display: grid;
+			place-content: center;
+			margin-top: 24px;
+		}
+
+		&__Success {
+			color: green;
+			text-align: center;
+		}
+	}
+	.TextArea {
+		height: 100px;
+	}
+}

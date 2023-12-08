@@ -1,35 +1,37 @@
 {
-  "name": "rci-construction-frontend",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "cookies-next": "^4.1.0",
-    "font-awesome": "^4.7.0",
-    "html-react-parser": "^5.0.7",
-    "next": "latest",
-    "node-html-parser": "^6.1.11",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-fast-marquee": "^1.6.2",
-    "react-spring": "^9.7.3",
-    "sass": "^1.69.5"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
-    "typescript": "latest"
-  }
+	"name": "rci-construction-frontend",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.5.1",
+		"@fortawesome/free-brands-svg-icons": "^6.5.1",
+		"@fortawesome/free-solid-svg-icons": "^6.5.1",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"cookies-next": "^4.1.0",
+		"font-awesome": "^4.7.0",
+		"html-react-parser": "^5.0.7",
+		"next": "latest",
+		"node-html-parser": "^6.1.11",
+		"react": "latest",
+		"react-dom": "latest",
+		"react-fast-marquee": "^1.6.2",
+		"react-hook-form": "^7.48.2",
+		"react-spring": "^9.7.3",
+		"resend": "^2.0.0",
+		"sass": "^1.69.5"
+	},
+	"devDependencies": {
+		"@types/node": "latest",
+		"@types/react": "latest",
+		"@types/react-dom": "latest",
+		"eslint": "latest",
+		"eslint-config-next": "latest",
+		"typescript": "latest"
+	}
 }
