@@ -16,7 +16,7 @@ const CareerNote = ({ careerData }: Props) => {
         <div className="CareerNote">
             <h2 className="CareerNote__Title">{title}</h2>
             <p className="CareerNote__Text">{text}</p>
-            <a className="CareerNote__Link" href="/">{read_more}</a>
+            <a className="CareerNote__Link" href="/karriar">{read_more}</a>
         </div>
     )
 }
