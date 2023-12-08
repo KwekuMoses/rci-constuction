@@ -27,7 +27,7 @@ const MobileNavigation = ({ isMobile, servicesData, navigationData, isOpen, setI
                 <div className="BurgerLine"></div>
             </div>
             <div className={`MobileNavigation__MobileMenu ${isOpen ? 'open' : ''}`}>
-                <NavigationLinks isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} />
+                <NavigationLinks setIsOpen={setIsOpen} isMobile={isMobile} servicesData={servicesData} navigationData={navigationData} />
                 <div className="MobileNavigation__CtaButton">
                     <CtaButton width="full" />
                 </div>

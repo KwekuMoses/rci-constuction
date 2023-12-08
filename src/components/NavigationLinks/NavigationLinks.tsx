@@ -13,9 +13,10 @@ interface Props {
             rendered: string
         }
     }] | {};
+    setIsOpen: (isOpen: boolean) => void;
 }
 
-const NavigationLinks = ({ isMobile, servicesData, navigationData }: Props) => {
+const NavigationLinks = ({ isMobile, servicesData, navigationData, setIsOpen }: Props) => {
 
     const pathname = usePathname();
 
@@ -70,10 +71,11 @@ const NavigationLinks = ({ isMobile, servicesData, navigationData }: Props) => {
                     className={`NavigationLinks__Link ${isActiveLink(pathname, link)}`}
                     href={`${link}`}
                     key={id}
-                >
-                    {page}
-                </Link>
-            ))}
+                    onClick={() => setIsOpen(false)} 
+              >
+                  {page}
+              </Link>
+          ))}
         </div>
     );
 }
