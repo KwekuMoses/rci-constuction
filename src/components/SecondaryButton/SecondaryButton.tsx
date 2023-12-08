@@ -8,7 +8,7 @@ interface Props {
 const SecondaryButton = ({ buttonData }: Props) => {
     const text = buttonData
     return (
-        <Link href="/projekt" className="SecondaryButton">{text}</Link>
+        <Link href="/vara-projekt" className="SecondaryButton">{text}</Link>
     )
 }
 
