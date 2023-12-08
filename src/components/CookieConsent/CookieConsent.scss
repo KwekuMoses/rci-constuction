@@ -1,0 +1,50 @@
+.Cookiebanner {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #000000c7; 
+	box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	display: block;
+	color: white;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Cookiebanner__Content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 5%;
+	display: grid;
+	justify-content: center;
+}
+
+.Cookiebanner__Text {
+	font-size: 14px;
+	color: #ffffff; 
+	width: 90vw;
+	text-align: center;
+	margin: 0 auto;
+
+}
+
+.Cookiebanner__Button {
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 4px;
+    width: 100px;
+    justify-self: center;
+    margin-top: 12px;
+}
+
+

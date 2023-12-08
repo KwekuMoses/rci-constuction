@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 import { fetchServiceData, fetchNavigationData } from '@/utils/fetchData'
+import CookieConsent from '@/components/CookieConsent/CookieConsent'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,6 +28,7 @@ export default async function RootLayout({
         <Header servicesData={servicesData} navigationData={navigationData} />
         {children}
         <Footer servicesData={servicesData} />
+        <CookieConsent />
       </body>
     </html>
   )
