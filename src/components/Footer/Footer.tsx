@@ -5,10 +5,6 @@ import './Footer.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-// In your component
-
-
-
 interface Props {
     servicesData: {
         id: number;
@@ -23,7 +19,7 @@ const Footer = ({ servicesData }: Props) => {
             <div className="Footer__Services">
                 {servicesData.map(service => (
                     <div className="Footer__ServiceLink" key={service.id}>
-                        <Link href={`/service/${service.slug}`}>
+                        <Link href={`/tjanster/${service.slug}`}>
                             {service.title.rendered}
                         </Link>
                     </div>

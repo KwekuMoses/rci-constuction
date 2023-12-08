@@ -46,7 +46,7 @@ const ServicesSection = ({ servicesData }: Props) => {
                         </div>
                         <h3 className="ServiceSection__CardTitle">{title}</h3>
                         <div className="ServiceSection__CardText">{text}</div>
-                        <Link className="ServiceSection__CardLink" href={linkUrl}>{text_link_formatted}</Link>
+                        <Link className="ServiceSection__CardLink" href={`tjanster/${linkUrl}`}>{text_link_formatted}</Link>
                     </div>
                 );
             })}

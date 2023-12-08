@@ -8,7 +8,6 @@ import './page.scss'
 
 const page = async () => {
     const careerPageData = await fetchPageData(9)
-    console.log(careerPageData.acf.career)
     const title = careerPageData.acf.career.title
     const text = careerPageData.acf.career.text
     const imageUrl = careerPageData.acf.career.image

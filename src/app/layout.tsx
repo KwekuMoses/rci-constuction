@@ -18,12 +18,8 @@ export default async function RootLayout({
   children: React.ReactNode
   }) {
 
-
   const servicesData = await fetchServiceData()
   const navigationData = await fetchNavigationData()
-
-  console.log(navigationData)
-
 
   return (
     <html lang="en">

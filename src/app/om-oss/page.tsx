@@ -10,10 +10,7 @@ const Page = async () => {
     const aboutPageData = await fetchPageData(16)
     const title = aboutPageData.acf.about.title
     const description = aboutPageData.acf.about.description
-
-    console.log(aboutPageData.acf.about)
     const { image_1, image_2, image_3, image_4 } = aboutPageData.acf.about
-
 
     return (
         <main className="About">
