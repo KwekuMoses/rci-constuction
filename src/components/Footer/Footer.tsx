@@ -4,6 +4,7 @@ import './Footer.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import GoogleTracker from '../GoogleTracker/GoogleTracker';
 
 interface Props {
     servicesData: {
@@ -37,6 +38,7 @@ const Footer = ({ servicesData }: Props) => {
             <div className="Footer__Copyright">
                 Copyright © 2023 All Rights Reserved
             </div>
+            <GoogleTracker />
         </div>
     );
 }
