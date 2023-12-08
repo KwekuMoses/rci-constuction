@@ -9,7 +9,7 @@ import { fetchPageData } from '../utils/fetchData'
 import SecondaryButton from '@/components/SecondaryButton/SecondaryButton'
 import DesktopMarquee from '@/components/DesktopMarquee/DesktopMarquee'
 import styles from './page.module.css'
-import Footer from '@/components/Footer/Footer'
+
 
 export default async function Home() {
   const homePageId = 11
@@ -36,6 +36,8 @@ export default async function Home() {
       <CustomMarquee logoData={logoData} />
       <DesktopMarquee logoData={logoData} />
       <CareerNote careerData={careerData} />
+
+
     </main>
   )
 }

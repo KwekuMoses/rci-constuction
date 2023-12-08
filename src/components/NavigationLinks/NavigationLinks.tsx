@@ -53,13 +53,13 @@ const NavigationLinks = ({ isMobile, servicesData, navigationData, setIsOpen }: 
         {
             page: 'Om oss',
             link: '/om-oss',
-            id: 3
+            id: 5
         },
 
         {
             page: 'Kontakt',
             link: '/kontakt',
-            id: 4
+            id: 6
         },
     ]
 
