@@ -17,7 +17,6 @@ const ProjectPage = async ({ id, title }: Props) => {
 
     const { project_description } = projectsData.acf.projects
     const gallery = (projectsData.acf.projects.gallery)
-    console.log(gallery)
 
     const { image_1, image_2, image_3, image_4, image_5, image_6 } = gallery
     return (
@@ -38,7 +37,6 @@ const ProjectPage = async ({ id, title }: Props) => {
                     {image_6 && image(image_6)}
                 </div>
             </div>
-
         </main>
     )
 }

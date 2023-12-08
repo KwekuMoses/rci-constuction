@@ -32,7 +32,7 @@ const Page = async () => {
             <div className="Projects__Wrapper">
                 {projectsData.map((project) => (
                     project.acf && project.acf.projects && project.acf.projects.featured_image ? (
-                        <Link href={`/projects/${project.slug}`} key={project.id}>
+                        <Link href={`/vara-projekt/${project.slug}`} key={project.id}>
                             <div className="Projects__Project">
                                 <div className="Projects__ImageWrapper">
                                     <Image
