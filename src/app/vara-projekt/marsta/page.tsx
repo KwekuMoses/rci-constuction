@@ -5,7 +5,7 @@ import Title from '@/components/Title/Title'
 
 const page = () => {
     const tyresöWpId = 210
-    const title = "Marsta"
+    const title = "Märsta"
 
     return (
         <div>
