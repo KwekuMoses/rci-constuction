@@ -3,40 +3,40 @@
 .DesktopMarquee {
 	overflow: hidden;
 	white-space: nowrap;
-    margin-top: $sectionMarginMedium; 
-    margin-bottom: $sectionMarginMedium;
-    width: 100vw;
-    display: grid;
-    justify-content: center;
+	margin-top: $sectionMarginMedium;
+	margin-bottom: $sectionMarginMedium;
+	width: 100vw;
+	display: grid;
+	justify-content: center;
+	background: #fff;
+	width: max-content;
+	margin: auto;
+	margin-bottom: auto;
+	margin-bottom: 100px;
+	border-bottom: 1px solid #80808040;
+	padding: 25px;
+    display: none;
 
-    background: #fff;
-  width: max-content;
-  margin: auto;
-    margin-bottom: auto;
-  margin-bottom: 100px;
-  border-bottom: 1px solid #80808040;
-  padding: 25px;
+	@media (min-width: $mediumScreens) {
+		display: block;
+	}
 
-    @media(max-width: $mediumScreens) {
-        display: none;
-    }
+	&__Content {
+		display: flex;
+		align-items: center;
+	}
 
-    &__Content {
-        display: flex;
-        align-items: center;
-    }
+	&__ImageContainer {
+		width: 50px;
+		flex-shrink: 0;
+		margin: 0 12px;
 
-    &__ImageContainer {
-        width: 50px; 
-        flex-shrink: 0;
-        margin: 0 12px; 
-   
-        &--first {
-            width: 100px;
-        }
+		&--first {
+			width: 100px;
+		}
 
-      &--second{
-            width: 150px;
-        }
-    }
+		&--second {
+			width: 150px;
+		}
+	}
 }
