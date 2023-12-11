@@ -29,12 +29,12 @@ const Footer = ({ servicesData }: Props) => {
             </div>
             <div className="Footer__Social">
                 <div className="Footer__Icon">
-                    <a href="https://www.facebook.com/RCIBYGG/">
+                    <a href="https://www.facebook.com/RCIBYGG/" aria-label="Facebook">
                         <FontAwesomeIcon icon={faFacebook} />
                     </a>
                 </div>
                 <div className='Footer__Icon'>
-                    <a href="https://www.instagram.com/rci.bygg.ab/">
+                    <a href="https://www.instagram.com/rci.bygg.ab/" aria-label="Instagram">
                         <FontAwesomeIcon icon={faInstagram} />
                     </a>
                 </div>
