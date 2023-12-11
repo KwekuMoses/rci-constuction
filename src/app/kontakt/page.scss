@@ -2,7 +2,7 @@
 
 .ContactPage {
 	margin-top: $headerHeight * 2;
-	margin-bottom: 200px;
+
 	.Form {
 		display: grid;
 		background-color: #f4f4f4;
@@ -10,6 +10,7 @@
 		padding: 25px;
 		box-shadow: $cardShadow;
 		width: clamp(300px, 40vw, 600px);
+		margin-bottom: 400px;
 
 		&__Title {
 			text-align: center;
@@ -34,7 +35,7 @@
 			font-size: 14px;
 
 			&:hover {
-				cursor:pointer;
+				cursor: pointer;
 			}
 		}
 
@@ -43,11 +44,10 @@
 			text-align: center;
 		}
 
-	&__Policy {
-		font-size: 12px;
+		&__Policy {
+			font-size: 12px;
+		}
 	}
-	}
-
 
 	.TextArea {
 		height: 100px;
