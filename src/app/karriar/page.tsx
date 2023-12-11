@@ -32,8 +32,6 @@ const page = async () => {
                         <p>{text}</p>
                     </div>
                 </div>
-
-
             </div>
         </div>
     )
