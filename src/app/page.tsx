@@ -36,8 +36,6 @@ export default async function Home() {
       <CustomMarquee logoData={logoData} />
       <DesktopMarquee logoData={logoData} />
       <CareerNote careerData={careerData} />
-
-
     </main>
   )
 }

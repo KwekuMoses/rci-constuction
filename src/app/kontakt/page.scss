@@ -31,13 +31,24 @@
 			display: grid;
 			place-content: center;
 			margin-top: 24px;
+			font-size: 14px;
+
+			&:hover {
+				cursor:pointer;
+			}
 		}
 
 		&__Success {
 			color: green;
 			text-align: center;
 		}
+
+	&__Policy {
+		font-size: 12px;
 	}
+	}
+
+
 	.TextArea {
 		height: 100px;
 	}

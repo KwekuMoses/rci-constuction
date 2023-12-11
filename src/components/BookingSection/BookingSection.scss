@@ -1,6 +1,7 @@
 @import '../../Styles/variables.scss';
 
 .BookingSection {
+    margin: $sectionMarginMedium auto $sectionMarginMedium auto;
 
     &__CardWrapper {
         width: 90%;

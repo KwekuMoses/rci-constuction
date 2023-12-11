@@ -2,6 +2,8 @@ import React from 'react';
 import './CustomMarquee.scss';
 import Image from 'next/image';
 import Marquee from "react-fast-marquee";
+import Title from '../Title/Title';
+
 
 interface Props {
     logoData: {
@@ -17,6 +19,7 @@ const CustomMarquee = ({ logoData }: Props) => {
 
     return (
         <div className="Marquee">
+            <Title title="Vi sammarbetar med" />
             <div className="Marquee__Content">
                 <Marquee>
                     {image_1 && <div className="Marquee__ImageContainer Marquee__ImageContainer--first"><Image src={image_1} alt="Logo 1" layout="responsive" width={100} height={50} priority={true} /></div>}

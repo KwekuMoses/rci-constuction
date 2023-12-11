@@ -1,6 +1,8 @@
 import React from 'react'
 import './CareerNote.scss'
 
+import Title from '../Title/Title'
+
 interface Props {
     careerData: {
         title: string | null;
@@ -13,11 +15,13 @@ const CareerNote = ({ careerData }: Props) => {
     const { title, text, read_more } = careerData
 
     return (
-        <div className="CareerNote">
-            <h2 className="CareerNote__Title">{title}</h2>
+        <>
+            <Title title="Vill du jobba hos oss?" />
+            <div className="CareerNote">
             <p className="CareerNote__Text">{text}</p>
             <a className="CareerNote__Link" href="/karriar">{read_more}</a>
-        </div>
+            </div>
+        </>
     )
 }
 

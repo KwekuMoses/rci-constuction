@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
+import Link from 'next/link';
+
 import Title from '@/components/Title/Title';
 import './page.scss';
 
@@ -26,10 +28,10 @@ const Page = () => {
 
             const responseData = await response.json();
             setData(JSON.stringify(responseData));
-            setIsEmailSent(true); 
+            setIsEmailSent(true);
         } catch (error) {
             console.error('Error sending email:', error);
-            setIsEmailSent(false); 
+            setIsEmailSent(false);
         }
     };
 
@@ -47,6 +49,11 @@ const Page = () => {
                 {/* <p>{data}</p> */}
                 {isEmailSent && <p className="Form__Success">Ditt meddelande är skickat!</p>}
                 <input type="submit" className="Form__Button" value="Skicka meddelande" />
+                <p className="Form__Policy">
+                    När du skickar meddelande eller e-post lämnar du samtycke till att vi hanterar dina personuppgifter du lämnar.
+                    <Link href="/integritetspolicy"> Här kan du läsa mer om hur vi hanterar dina personliga uppgifter.</Link>
+                </p>
+
             </form>
         </div>
     );

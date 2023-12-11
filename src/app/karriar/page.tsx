@@ -13,7 +13,7 @@ const page = async () => {
     const imageUrl = careerPageData.acf.career.image
     return (
         <div className="CareerPage">
-            <Title title="Karriär"></Title>
+            <Title title="Karriär" />
             <div className="CareerPage__Container">
                 <div className="CareerPage__BoxLeft">
                     <div className="CareerPage__ImageWrapper">

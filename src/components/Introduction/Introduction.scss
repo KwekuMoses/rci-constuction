@@ -3,30 +3,29 @@
 .Introduction {
 	margin: 0 auto;
 	width: 86vw;
+	margin-top: 110px;
+	margin-bottom: $sectionMarginMedium;
 
 	@media (min-width: $mediumScreens) {
 		width: clamp(600px, 70vw, 1100px);
 	}
 	&__Title {
 		text-align: center;
-		margin-top: $sectionMarginMedium;
-		margin-bottom: $titleMarginBottom;
 		min-width: max-content;
 
 		@media(min-width: $mediumScreens) {
-			margin-top: $sectionMarginLarge;
+			// margin-top: $sectionMarginLarge;
 		}
 	}
 
 	&__Description {
-		max-width: 100%;
+		max-width: 750px;
+		margin: 0 auto;
 		text-align: center;
-		// padding: 0 24px;
-		margin-bottom: $sectionMarginMedium;
 		font-size: $paragraphFontSize;
 
+
 		@media(min-width: $mediumScreens) {
-			margin-bottom: $sectionMarginLarge;
 
 		}
 	}

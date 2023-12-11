@@ -26,7 +26,7 @@ const Page = async () => {
     return (
         <div className="Projects">
             <div className="Projects__Title">
-                <Title title="Våra projekt"></Title>
+                <Title title="Våra projekt" />
             </div>
 
             <div className="Projects__Wrapper">

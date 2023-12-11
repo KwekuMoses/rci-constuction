@@ -20,8 +20,8 @@ const BookingSection = ({ bookingData }: Props) => {
     const cardsArray = [card_1, card_2, card_3];
 
     return (
-        <>
-            <Title title={title} />
+        <div className="BookingSection">
+            <div className="BookingSection__TitleWrapper"> <Title title={title} /> </div>    
             <div className="BookingSection__CardWrapper">
                 {cardsArray.map((card, index) => {
                     const { title: cardTitle, text: cardText, icon: cardIcon } = card;
@@ -36,7 +36,7 @@ const BookingSection = ({ bookingData }: Props) => {
                 })}
             </div>
             <Button width="medium" />
-        </>
+        </div>
     );
 }
 

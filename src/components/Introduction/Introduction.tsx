@@ -16,7 +16,7 @@ const Introduction = ({ introductionData }: Props) => {
     return (
         <div className="Introduction">
             <div className="Introduction__Title">
-                <Title title={title}></Title>
+                <Title title={title} />
             </div>
             <div className="Introduction__Description">{text}</div>
         </div>

@@ -1,3 +1,6 @@
 .Logo {
     font-weight: bold;
+    &:hover {
+        cursor: default;
+    }
 }

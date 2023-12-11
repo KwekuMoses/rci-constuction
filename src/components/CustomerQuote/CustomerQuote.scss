@@ -3,8 +3,8 @@
 
 .CustomerQuote {
     
-    margin-top: $sectionMarginMedium + 150px;
-    margin-bottom: $sectionMarginMedium + 150px;
+    margin-top: $sectionMarginMedium;
+    margin-bottom: $sectionMarginMedium;
 
 
 	&__ImageWrapper {
@@ -14,6 +14,11 @@
 		display: grid;
 		place-content: center end;
 	}
+
+    &__TitleWrapper{
+        display: grid;
+        justify-content: center;
+    }
 
 	&__Image {
 		width: 60px;

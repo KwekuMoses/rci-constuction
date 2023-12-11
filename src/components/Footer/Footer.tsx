@@ -29,14 +29,21 @@ const Footer = ({ servicesData }: Props) => {
             </div>
             <div className="Footer__Social">
                 <div className="Footer__Icon">
-                    <FontAwesomeIcon icon={faFacebook} />
+                    <a href="https://www.facebook.com/RCIBYGG/">
+                        <FontAwesomeIcon icon={faFacebook} />
+                    </a>
                 </div>
                 <div className='Footer__Icon'>
-                    <FontAwesomeIcon icon={faInstagram} />
+                    <a href="https://www.instagram.com/rci.bygg.ab/">
+                        <FontAwesomeIcon icon={faInstagram} />
+                    </a>
                 </div>
             </div>
             <div className="Footer__Copyright">
                 Copyright © 2023 All Rights Reserved
+            </div>
+            <div className="Footer__Privacy">
+                <Link href="/integritetspolicy">Integritetspolicy</Link>
             </div>
             <GoogleTracker />
         </div>

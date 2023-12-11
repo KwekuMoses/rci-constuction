@@ -14,7 +14,7 @@ const Page = async () => {
 
     return (
         <main className="About">
-            <Title title={title}></Title>
+            <Title title={title} />
             <p className="About__Description">{description}</p>
             <div className="About__ImageContainer">
                 <div className="About__Row About__Row--First">
