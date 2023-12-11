@@ -1,8 +1,16 @@
+import ComingSoon from '@/components/ComingSoon/ComingSoon'
 import React from 'react'
 
+import Title from '@/components/Title/Title'
+
 const page = () => {
+    const tyresöWpId = 210
+    const title = "Täby"
+
     return (
-        <div>page</div>
+        <div>
+            <ComingSoon title={title} />
+        </div>
     )
 }
 
