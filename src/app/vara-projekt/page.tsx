@@ -20,7 +20,7 @@ interface Project {
 
 
 const Page = async () => {
-    const projectsData = await fetchProjectsData();
+    const projectsData = await fetchProjectsData("");
 
     return (
         <div className="Projects">

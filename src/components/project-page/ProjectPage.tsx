@@ -13,7 +13,7 @@ interface Props {
 
 
 const ProjectPage = async ({ id, title }: Props) => {
-    const projectsData = await fetchProjectsData()
+    const projectsData = await fetchProjectsData(id)
 
     const { project_description } = projectsData.acf.projects
     const gallery = (projectsData.acf.projects.gallery)
