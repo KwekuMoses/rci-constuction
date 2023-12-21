@@ -20,7 +20,9 @@ export default async function RootLayout({
   }) {
 
   const servicesData = await fetchServiceData()
-  const navigationData = await fetchNavigationData()
+
+  const navigationData_ = await fetchNavigationData()
+  const navigationData = navigationData_.data.pages.nodes
 
   return (
     <html lang="en">
