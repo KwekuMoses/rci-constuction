@@ -1,6 +1,6 @@
 import React from 'react'
 import { fetchPageData } from '@/api/api'
-import Title from '@/components/Title/Title'
+import Title from '@/components/title/Title'
 
 import Image from 'next/image'
 

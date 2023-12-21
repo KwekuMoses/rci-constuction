@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from '../Title/Title';
+import Title from '../title/Title';
 import Button from '../cta-button/CtaButton';
 import BookingCardSection from '../bookingcard-section/BookingCardSection';
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { fetchProjectsData } from '@/api/api'
-import Title from '../Title/Title';
+import Title from '../title/Title';
 import Image from 'next/image'
 
 import './ProjectPage.scss'

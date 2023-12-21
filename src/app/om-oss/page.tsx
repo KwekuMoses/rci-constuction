@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { fetchPageData } from '@/api/api'
 
-import Title from '@/components/Title/Title'
+import Title from '@/components/title/Title'
 
 import './page.scss'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import './CareerNote.scss'
 
-import Title from '../Title/Title'
+import Title from '../title/Title'
 
 interface Props {
     careerData: {

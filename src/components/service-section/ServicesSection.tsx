@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from '../Title/Title'
+import Title from '../title/Title'
 import Link from 'next/link';
 
 import Image from 'next/image'

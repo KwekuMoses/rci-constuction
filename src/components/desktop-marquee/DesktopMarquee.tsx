@@ -1,7 +1,7 @@
 import React from 'react';
 import './DesktopMarquee.scss';
 import Image from 'next/image';
-import Title from '../Title/Title';
+import Title from '../title/Title';
 
 interface Props {
     logoData: {

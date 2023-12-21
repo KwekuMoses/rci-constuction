@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import Title from '../Title/Title'
+import Title from '../title/Title'
 
 import './CustomerQuote.scss'
 

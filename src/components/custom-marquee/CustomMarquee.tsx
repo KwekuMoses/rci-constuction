@@ -2,7 +2,7 @@ import React from 'react';
 import './CustomMarquee.scss';
 import Image from 'next/image';
 import Marquee from "react-fast-marquee";
-import Title from '../Title/Title';
+import Title from '../title/Title';
 
 
 interface Props {

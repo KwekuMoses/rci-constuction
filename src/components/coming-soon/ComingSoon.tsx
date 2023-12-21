@@ -1,6 +1,6 @@
 import React from 'react'
 import './ComingSoon.scss'
-import Title from '../Title/Title';
+import Title from '../title/Title';
 
 interface Props {
     title: string;

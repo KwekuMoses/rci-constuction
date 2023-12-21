@@ -1,7 +1,7 @@
 import React from 'react'
 import './page.scss'
 
-import Title from '../../components/Title/Title'
+import Title from '../../components/title/Title'
 
 const page = () => {
     return (
