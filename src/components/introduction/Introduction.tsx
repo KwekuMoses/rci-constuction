@@ -12,6 +12,7 @@ interface Props {
 
 const Introduction = ({ introductionData }: Props) => {
     const { title, text } = introductionData
+    console.log(introductionData)
 
     return (
         <div className="Introduction">

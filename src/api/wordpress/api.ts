@@ -86,7 +86,6 @@ export const fetchHomePageData = cache(async (uri: string) => {
               }
             }
             introduction {
-              fieldGroupName
               text
               title
             }

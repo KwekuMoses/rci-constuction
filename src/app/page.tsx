@@ -22,7 +22,6 @@ export default async function Home() {
 
   const homePageId = 11
   const homePageData = await fetchPageData(homePageId)
-  // const heroData = homePageData.acf.hero
 
   const introductionData = homePageData.acf.introduction
   const servicesData = homePageData.acf.services
@@ -37,7 +36,7 @@ export default async function Home() {
   return (
     <main className={styles.Home}>
       <Hero heroData={heroData} />
-      <Introduction introductionData={introductionData} />
+      <Introduction introductionData={introduction} />
       <ServicesSection servicesData={servicesData} />
       <div className={styles.ButtonWrapper}>
         <SecondaryButton buttonData={buttonData} />
