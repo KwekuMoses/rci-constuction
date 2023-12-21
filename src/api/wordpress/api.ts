@@ -66,6 +66,58 @@ export const fetchNavigationData = cache(async () => {
     return fetchGraphQLData(query);
 });
 
+
+
+
+export const fetchHomePageData = cache(async (uri: string) => {
+
+    const query = `
+    query HomePageData {
+        pageBy(uri: "hem") {
+          home {
+            buttonText
+            ctaButtonText
+            hero {
+              subtitle
+              tagline
+              title
+              imageurl {
+                sourceUrl
+              }
+            }
+            introduction {
+              fieldGroupName
+              text
+              title
+            }
+            logos {
+              image1 {
+                sourceUrl
+              }
+              image2 {
+                sourceUrl
+              }
+              image3 {
+                sourceUrl
+              }
+            }
+            services {
+              title
+            }
+            socialProof {
+              company
+              person
+              quote
+            }
+          }
+        }
+      }`;
+
+    return fetchGraphQLData(query);
+})
+
+
+
 export const fetchPageData = cache(async (id: number) => {
     const res = await fetch(`${BASE_URL}/pages/${id}`)
     // The return value is *not* serialized

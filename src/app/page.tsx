@@ -9,12 +9,20 @@ import SecondaryButton from '@/components/secondary-button/SecondaryButton'
 import DesktopMarquee from '@/components/desktop-marquee/DesktopMarquee'
 import styles from './page.module.css'
 
-import { fetchHeroData, fetchPageData } from '../api/wordpress/api'
+import { fetchHeroData, fetchPageData, fetchHomePageData } from '../api/wordpress/api'
 
 export default async function Home() {
+
+  const homeData = await fetchHomePageData("hem")
+  const { buttonText, services, hero, introduction, logos, socialProof } = homeData.data.pageBy.home
+  const heroData = hero
+
+
+
+
   const homePageId = 11
   const homePageData = await fetchPageData(homePageId)
-  const heroData = homePageData.acf.hero
+  // const heroData = homePageData.acf.hero
 
   const introductionData = homePageData.acf.introduction
   const servicesData = homePageData.acf.services
@@ -24,13 +32,11 @@ export default async function Home() {
   const logoData = homePageData.acf.logos
   const careerData = homePageData.acf.career_note
 
-  const heroData_ = await fetchHeroData('hem')
 
-  // console.log(heroData_.data.pageBy.home.hero)
 
   return (
     <main className={styles.Home}>
-      <Hero heroData={heroData} heroData_={heroData_} />
+      <Hero heroData={heroData} />
       <Introduction introductionData={introductionData} />
       <ServicesSection servicesData={servicesData} />
       <div className={styles.ButtonWrapper}>

@@ -6,15 +6,12 @@ import { dm_sans_thin } from '@/styles/fonts';
 
 
 interface Props {
-    heroData: {
         title: string;
         tagline: string;
         subtitle: string;
-    }
 }
 
-const HeroText = async ({ heroData }: Props) => {
-    const { title, tagline, subtitle } = heroData
+const HeroText = async ({ title, subtitle, tagline }: Props) => {
 
     return (
         <div className={`HeroText`} >

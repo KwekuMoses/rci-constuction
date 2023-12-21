@@ -9,24 +9,27 @@ import { poppins } from '../../styles/fonts';
 import './Hero.scss';
 
 interface Props {
+
     heroData: {
-        imageUrl: string | null;
-        title: string;
         tagline: string;
         subtitle: string;
-
-    }
-    heroData_: {
+        title: string;
+        imageurl: {
+            sourceUrl: string
+        }
 
     }
 }
 
-const Hero = ({ heroData, heroData_ }: Props) => {
-    const { imageUrl } = heroData
+const Hero = ({ heroData }: Props) => {
+
+    const imageUrl = heroData.imageurl.sourceUrl
+    const { title, tagline, subtitle } = heroData
+
     return (
         <div className={`Hero ${poppins.className}`}>
             <div className="Hero__TextWrapper">
-                <HeroText heroData={heroData} />
+                <HeroText title={title} subtitle={subtitle} tagline={tagline} />
             </div>
             {imageUrl && (
                 <Image
