@@ -19,6 +19,8 @@ interface Props {
 
 const NavigationLinks = ({ isMobile, servicesData, navigationData, setIsOpen }: Props) => {
 
+    console.log(navigationData)
+
     const pathname = usePathname();
 
     const sortedNavigationData = [...navigationData].sort((a, b) => a.menuOrder - b.menuOrder);
