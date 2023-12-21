@@ -5,10 +5,16 @@ import NavigationLinks from '../navigation-links/NavigationLinks';
 import './MobileNavigation.scss';
 import CtaButton from '../cta-button/CtaButton';
 
+interface NavigationItem {
+    title: string;
+    slug: string;
+    menuOrder: number;
+}
+
 interface Props {
     isMobile: boolean;
     servicesData: {};
-    navigationData: {};
+    navigationData: NavigationItem[];
     isOpen: boolean;
     setIsOpen: (isOpen: boolean) => void;
 }
