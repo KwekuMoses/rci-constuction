@@ -1,5 +1,5 @@
 import React from 'react'
-import CtaButton from '../CtaButton/CtaButton'
+import CtaButton from '../cta-button/CtaButton'
 import './ContactSection.scss'
 
 const ContactSection = () => {

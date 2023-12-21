@@ -1,9 +1,9 @@
 "use client"
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-import NavigationLinks from '../NavigationLinks/NavigationLinks';
+import NavigationLinks from '../navigation-links/NavigationLinks';
 import './MobileNavigation.scss';
-import CtaButton from '../CtaButton/CtaButton';
+import CtaButton from '../cta-button/CtaButton';
 
 interface Props {
     isMobile: boolean;

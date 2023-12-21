@@ -1,8 +1,8 @@
 // 'use client';
 import React from 'react';
 
-import MobileNavigation from '../MobileNavigation/MobileNavigation';
-import DesktopNavigation from '../DesktopNavigation/DesktopNavigation';
+import MobileNavigation from '../mobile-navigation/MobileNavigation';
+import DesktopNavigation from '../desktop-navigation/DesktopNavigation';
 import './Navigation.scss';
 
 // import { useNavigationData } from '@/Contexts/NavigationDataContext';

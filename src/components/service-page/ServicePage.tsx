@@ -1,9 +1,9 @@
 import React from 'react'
-import ServiceHero from "@/components/ServiceHero/ServiceHero";
-import ServiceQuote from "@/components/ServiceQuote/ServiceQuote";
-import ServiceCards from "@/components/ServiceCards/ServiceCards";
-import ServiceShowcase from "@/components/ServiceShowcase/ServiceShowcase";
-import { fetchServicesData } from '@/utils/fetchData'
+import ServiceHero from "@/components/service-hero/ServiceHero";
+import ServiceQuote from "@/components/service-quote/ServiceQuote";
+import ServiceCards from "@/components/service-cards/ServiceCards";
+import ServiceShowcase from "@/components/service-showcase/ServiceShowcase";
+import { fetchServicesData } from '@/api/api'
 
 interface Props {
     id: number

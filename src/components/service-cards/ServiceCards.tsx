@@ -1,6 +1,6 @@
 
 import './ServiceCards.scss'
-import SecondaryButton from '@/components/SecondaryButton/SecondaryButton';
+import SecondaryButton from '@/components/secondary-button/SecondaryButton';
 
 interface Card {
     title: string;

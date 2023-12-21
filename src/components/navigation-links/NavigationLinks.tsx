@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import './NavigationLinks.scss';
 import { isActiveLink } from '@/utils/routeHelpers';
 import { parseNavigationHTML } from '@/utils/parseNavigationHTML';
-
+import { fetchNavigationData } from '@/api/api';
 interface Props {
     isMobile: boolean;
     servicesData: {};
@@ -17,6 +17,7 @@ interface Props {
 }
 
 const NavigationLinks = ({ isMobile, servicesData, navigationData, setIsOpen }: Props) => {
+    const [data, setData] = React.useState([]);
 
     const pathname = usePathname();
 
@@ -27,6 +28,18 @@ const NavigationLinks = ({ isMobile, servicesData, navigationData, setIsOpen }: 
     const links = navigationDataString
         ? parseNavigationHTML(navigationDataString)
         : [];
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            let data = await fetchNavigationData()
+            setData(data)
+        }
+        fetchData()
+    }
+        , [])
+
+    console.log(data)
 
     const Links = [
         {
@@ -70,11 +83,11 @@ const NavigationLinks = ({ isMobile, servicesData, navigationData, setIsOpen }: 
                     className={`NavigationLinks__Link ${isActiveLink(pathname, link)}`}
                     href={`${link}`}
                     key={id}
-                    onClick={() => setIsOpen(false)} 
-              >
-                  {page}
-              </Link>
-          ))}
+                    onClick={() => setIsOpen(false)}
+                >
+                    {page}
+                </Link>
+            ))}
         </div>
     );
 }

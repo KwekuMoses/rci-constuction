@@ -4,7 +4,7 @@ import './Footer.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import GoogleTracker from '../GoogleTracker/GoogleTracker';
+import GoogleTracker from '../google-tracker/GoogleTracker';
 
 interface Props {
     servicesData: {

@@ -1,5 +1,5 @@
 import React from 'react'
-import BookingCard from '../BookingCard/BookingCard'
+import BookingCard from '../bookingcard/BookingCard'
 
 interface BookingCardProps {
     title: string | null;

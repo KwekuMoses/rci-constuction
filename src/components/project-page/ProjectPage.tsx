@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { fetchProjectsData } from '@/utils/fetchData'
+import { fetchProjectsData } from '@/api/api'
 import Title from '../Title/Title';
 import Image from 'next/image'
 

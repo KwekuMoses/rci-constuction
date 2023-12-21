@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from '../Title/Title';
-import Button from '../CtaButton/CtaButton';
-import BookingCardSection from '../BookingCardSection/BookingCardSection';
+import Button from '../cta-button/CtaButton';
+import BookingCardSection from '../bookingcard-section/BookingCardSection';
 
 import './BookingSection.scss';
 
@@ -21,7 +21,7 @@ const BookingSection = ({ bookingData }: Props) => {
 
     return (
         <div className="BookingSection">
-            <div className="BookingSection__TitleWrapper"> <Title title={title} /> </div>    
+            <div className="BookingSection__TitleWrapper"> <Title title={title} /> </div>
             <div className="BookingSection__CardWrapper">
                 {cardsArray.map((card, index) => {
                     const { title: cardTitle, text: cardText, icon: cardIcon } = card;
