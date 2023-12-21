@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { fetchPageData } from '@/api/api'
+import { fetchPageData } from '@/api/wordpress/api'
 
 import Title from '@/components/title/Title'
 

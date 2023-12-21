@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Title from '@/components/title/Title';
 import Link from 'next/link';
-import { fetchProjectsData } from '@/api/api';
+import { fetchProjectsData } from '@/api/wordpress/api';
 import './style.scss';
 
 interface Project {

@@ -14,7 +14,7 @@ const Page = () => {
 
     const onSubmit = async (formData: any) => {
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch('/resend', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

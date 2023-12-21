@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import './NavigationLinks.scss';
 import { isActiveLink } from '@/utils/routeHelpers';
 import { parseNavigationHTML } from '@/utils/parseNavigationHTML';
-import { fetchNavigationData } from '@/api/api';
+import { fetchNavigationData } from '@/api/wordpress/api';
 interface Props {
     isMobile: boolean;
     servicesData: {};

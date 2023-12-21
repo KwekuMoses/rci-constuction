@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '@/components/header/Header'
 import Footer from '@/components/footer/Footer'
-import { fetchServiceData, fetchNavigationData } from '@/api/api'
+import { fetchServiceData, fetchNavigationData } from '@/api/wordpress/api'
 import CookieConsent from '@/components/cookie-consent/CookieConsent'
 
 const inter = Inter({ subsets: ['latin'] })

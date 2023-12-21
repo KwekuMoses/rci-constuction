@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { fetchProjectsData } from '@/api/api'
+import { fetchProjectsData } from '@/api/wordpress/api'
 import Title from '../title/Title';
 import Image from 'next/image'
 

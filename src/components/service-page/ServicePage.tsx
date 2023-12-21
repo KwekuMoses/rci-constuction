@@ -3,7 +3,7 @@ import ServiceHero from "@/components/service-hero/ServiceHero";
 import ServiceQuote from "@/components/service-quote/ServiceQuote";
 import ServiceCards from "@/components/service-cards/ServiceCards";
 import ServiceShowcase from "@/components/service-showcase/ServiceShowcase";
-import { fetchServicesData } from '@/api/api'
+import { fetchServicesData } from '@/api/wordpress/api'
 
 interface Props {
     id: number
