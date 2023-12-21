@@ -5,16 +5,17 @@ import CustomerQuote from '../components/customer-quote/CustomerQuote'
 import BookingSection from '../components/booking-section/BookingSection'
 import CareerNote from '../components/career-note/CareerNote'
 import CustomMarquee from '../components/custom-marquee/CustomMarquee'
-import { fetchPageData } from '../api/wordpress/api'
 import SecondaryButton from '@/components/secondary-button/SecondaryButton'
 import DesktopMarquee from '@/components/desktop-marquee/DesktopMarquee'
 import styles from './page.module.css'
 
+import { fetchHeroData, fetchPageData } from '../api/wordpress/api'
 
 export default async function Home() {
   const homePageId = 11
   const homePageData = await fetchPageData(homePageId)
   const heroData = homePageData.acf.hero
+
   const introductionData = homePageData.acf.introduction
   const servicesData = homePageData.acf.services
   const buttonData = homePageData.acf.button_text
@@ -23,9 +24,13 @@ export default async function Home() {
   const logoData = homePageData.acf.logos
   const careerData = homePageData.acf.career_note
 
+  const heroData_ = await fetchHeroData('hem')
+
+  // console.log(heroData_.data.pageBy.home.hero)
+
   return (
     <main className={styles.Home}>
-      <Hero heroData={heroData} />
+      <Hero heroData={heroData} heroData_={heroData_} />
       <Introduction introductionData={introductionData} />
       <ServicesSection servicesData={servicesData} />
       <div className={styles.ButtonWrapper}>

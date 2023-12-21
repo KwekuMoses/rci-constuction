@@ -16,11 +16,13 @@ interface Props {
         subtitle: string;
 
     }
+    heroData_: {
+
+    }
 }
 
-const Hero = ({ heroData }: Props) => {
+const Hero = ({ heroData, heroData_ }: Props) => {
     const { imageUrl } = heroData
-
     return (
         <div className={`Hero ${poppins.className}`}>
             <div className="Hero__TextWrapper">
