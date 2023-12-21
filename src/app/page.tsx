@@ -23,7 +23,6 @@ export default async function Home() {
   const homePageId = 11
   const homePageData = await fetchPageData(homePageId)
 
-  const introductionData = homePageData.acf.introduction
   const servicesData = homePageData.acf.services
   const buttonData = homePageData.acf.button_text
   const socialProofData = homePageData.acf.social_proof
