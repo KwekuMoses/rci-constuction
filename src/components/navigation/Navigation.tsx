@@ -8,12 +8,16 @@ import './Navigation.scss';
 // import { useNavigationData } from '@/Contexts/NavigationDataContext';
 
 // import { fetchServiceData, fetchNavigationData } from '@/utils/fetchData'
-
+interface NavigationItem {
+    title: string;
+    slug: string;
+    menuOrder: number;
+}
 
 interface Props {
     isMobile: boolean;
     servicesData: {};
-    navigationData: {};
+    navigationData: NavigationItem[];
     isOpen: boolean;
     setIsOpen: (isOpen: boolean) => void;
 }
