@@ -6,7 +6,6 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 const URL = process.env.NEXT_PUBLIC_URL
 const PASSWORD = process.env.NEXT_PUBLIC_LOCAL_PASSWORD
 const USERNAME = process.env.NEXT_PUBLIC_USERNAME
-// Encode your username and password in base64
 const encodedCredentials = Buffer.from(`${USERNAME}:${PASSWORD}`).toString('base64');
 
 export const preloadHomeData = (id: number) => {

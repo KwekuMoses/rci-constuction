@@ -7,7 +7,7 @@ import Image from 'next/image'
 import './ProjectPage.scss'
 
 interface Props {
-    id: number
+    id: number | ""
     title: string
 }
 
