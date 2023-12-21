@@ -4,10 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faStar, faBuildingLock, faUserShield, faUsersLine } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
-// Define a type for the keys in iconMapping
 type IconName = string;
 
-// Define the type for the iconMapping object
 const iconMapping: { [key in IconName]: IconDefinition } = {
     'fa-thumbs-up': faThumbsUp,
     'fa-building-lock': faBuildingLock,
@@ -30,6 +28,8 @@ const BookingCard = ({ title, text, icon }: Props) => {
             faIcon = iconMapping[iconName as IconName];
         }
     }
+
+    //Note: Icons need a solution later. font awesome is not exposed in WpGrahpQL. Remove or Fix.
 
     return (
         <div className="BookingCard">

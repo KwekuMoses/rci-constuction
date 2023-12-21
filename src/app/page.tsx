@@ -9,42 +9,26 @@ import SecondaryButton from '@/components/secondary-button/SecondaryButton'
 import DesktopMarquee from '@/components/desktop-marquee/DesktopMarquee'
 import styles from './page.module.css'
 
-import { fetchHeroData, fetchPageData, fetchHomePageData } from '../api/wordpress/api'
+import { fetchHomePageData } from '../api/wordpress/api'
 
 export default async function Home() {
 
   const homeData = await fetchHomePageData("hem")
-  const { buttonText, services, hero, introduction, logos, socialProof } = homeData.data.pageBy.home
-  const heroData = hero
-
-
-
-
-  const homePageId = 11
-  const homePageData = await fetchPageData(homePageId)
-
-  const servicesData = homePageData.acf.services
-  const buttonData = homePageData.acf.button_text
-  const socialProofData = homePageData.acf.social_proof
-  const bookingData = homePageData.acf.call_to_action
-  const logoData = homePageData.acf.logos
-  const careerData = homePageData.acf.career_note
-
-
+  const { buttonText, services, hero, introduction, logos, callToAction, socialProof, careerNote } = homeData.data.pageBy.home
 
   return (
     <main className={styles.Home}>
-      <Hero heroData={heroData} />
+      <Hero heroData={hero} />
       <Introduction introductionData={introduction} />
-      <ServicesSection servicesData={servicesData} />
+      <ServicesSection servicesData={services} />
       <div className={styles.ButtonWrapper}>
-        <SecondaryButton buttonData={buttonData} />
+        <SecondaryButton buttonData={buttonText} />
       </div>
-      <CustomerQuote socialProofData={socialProofData} />
-      <BookingSection bookingData={bookingData} />
-      <CustomMarquee logoData={logoData} />
-      <DesktopMarquee logoData={logoData} />
-      <CareerNote careerData={careerData} />
+      <CustomerQuote socialProofData={socialProof} />
+      <BookingSection bookingData={callToAction} />
+      <CustomMarquee logoData={logos} />
+      <DesktopMarquee logoData={logos} />
+      <CareerNote careerData={careerNote} />
     </main>
   )
 }

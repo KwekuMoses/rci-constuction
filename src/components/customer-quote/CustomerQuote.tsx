@@ -7,7 +7,9 @@ import './CustomerQuote.scss'
 
 interface Props {
     socialProofData: {
-        image: string | null;
+        image: {
+            sourceUrl: string;
+        } 
         quote: string | null;
         company: string | null;
         person: string | null;
@@ -25,7 +27,7 @@ const CustomerQuoteSection = ({ socialProofData }: Props) => {
             </div>
             <div className="CustomerQuote__ImageWrapper">
                 {image && (
-                    <Image className='CustomerQuote__Image' src={image} alt="Customer Image" layout='fill' objectFit='contain' />
+                    <Image className='CustomerQuote__Image' src={image.sourceUrl} alt="Customer Image" layout='fill' objectFit='contain' />
                 )}
 
             </div>

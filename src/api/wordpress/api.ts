@@ -71,8 +71,7 @@ export const fetchNavigationData = cache(async () => {
 
 export const fetchHomePageData = cache(async (uri: string) => {
 
-    const query = `
-    query HomePageData {
+    const query = `query HomePageData {
         pageBy(uri: "hem") {
           home {
             buttonText
@@ -102,11 +101,64 @@ export const fetchHomePageData = cache(async (uri: string) => {
             }
             services {
               title
+              cards {
+                card1 {
+                  image {
+                    sourceUrl
+                  }
+                  text
+                  textLink
+                  title
+                }
+                card2 {
+                  image {
+                    sourceUrl
+                  }
+                  text
+                  textLink
+                  title
+                }
+                card3 {
+                  text
+                  textLink
+                  title
+                  image {
+                    sourceUrl
+                  }
+                }
+              }
             }
             socialProof {
               company
               person
               quote
+              image {
+                sourceUrl
+              }
+            }
+            careerNote {
+              title
+              text
+              readMore
+            }
+            callToAction {
+              card1 {
+                text
+                title
+              }
+              card2 {
+                text
+                title
+              }
+              card3 {
+                text
+                title
+              }
+              title
+              text
+              icon {
+                sourceUrl
+              }
             }
           }
         }
