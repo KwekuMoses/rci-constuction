@@ -18,10 +18,9 @@ interface Project {
     id: number
 }
 
-type ProjectsData = Project[];
 
 const Page = async () => {
-    const projectsData: ProjectsData = await fetchProjectsData();
+    const projectsData = await fetchProjectsData();
 
     return (
         <div className="Projects">
@@ -30,7 +29,7 @@ const Page = async () => {
             </div>
 
             <div className="Projects__Wrapper">
-                {projectsData.map((project) => (
+                {projectsData.map((project: Project) => (
                     project.acf && project.acf.projects && project.acf.projects.featured_image ? (
                         <Link href={`/vara-projekt/${project.slug}`} key={project.id}>
                             <div className="Projects__Project">
