@@ -7,9 +7,15 @@ import Logo from '../logo/Logo';
 
 import useMakeHeaderSticky from '@/utils/stickyHeader';
 
+interface NavigationItem {
+    title: string;
+    slug: string;
+    menuOrder: number;
+}
+
 interface Props {
     servicesData: {};
-    navigationData: {};
+    navigationData: NavigationItem[];
 }
 
 const Header = ({ servicesData, navigationData }: Props) => {
