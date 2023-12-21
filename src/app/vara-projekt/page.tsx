@@ -21,7 +21,7 @@ interface Project {
 type ProjectsData = Project[];
 
 const Page = async () => {
-    const projectsData: ProjectsData = await fetchProjectsData("");
+    const projectsData: ProjectsData = await fetchProjectsData();
 
     return (
         <div className="Projects">

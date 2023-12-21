@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchPageData } from '@/api/wordpress/api'
+import { fetchCareerPageData } from '@/api/wordpress/api'
 import Title from '@/components/title/Title'
 
 import Image from 'next/image'
@@ -7,17 +7,17 @@ import Image from 'next/image'
 import './page.scss'
 
 const page = async () => {
-    const careerPageData = await fetchPageData(9)
-    const title = careerPageData.acf.career.title
-    const text = careerPageData.acf.career.text
-    const imageUrl = careerPageData.acf.career.image
+    const data = await fetchCareerPageData()
+    const _data = data.data.pageBy.career.career
+    const { title, text, image } = _data
+
     return (
         <div className="CareerPage">
             <Title title="Karriär" />
             <div className="CareerPage__Container">
                 <div className="CareerPage__BoxLeft">
                     <div className="CareerPage__ImageWrapper">
-                        <Image src={imageUrl} alt="Career image"
+                        <Image src={image.sourceUrl} alt="Career image"
                             fill={true}
                             style={{ objectFit: "cover" }}
                             priority={true}

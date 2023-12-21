@@ -13,7 +13,7 @@ import { fetchHomePageData } from '../api/wordpress/api'
 
 export default async function Home() {
 
-  const homeData = await fetchHomePageData("hem")
+  const homeData = await fetchHomePageData()
   const { buttonText, services, hero, introduction, logos, callToAction, socialProof, careerNote } = homeData.data.pageBy.home
 
   return (

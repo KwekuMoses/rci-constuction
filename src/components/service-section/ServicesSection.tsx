@@ -27,7 +27,7 @@ const ServicesSection = ({ servicesData }: Props) => {
                 <Title title={title} />
             </div>
             {cardsArray.map((card: any, index: number) => {
-                const { title, text, text_link, image } = card;
+                const { title, text, textLink, image } = card;
 
                 function replaceSwedishChars(string: string) {
                     return string.replace(/å/gi, 'a')
@@ -43,7 +43,7 @@ const ServicesSection = ({ servicesData }: Props) => {
                     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
                 }
 
-                const text_link_formatted = capitalizeFirstLetter(text_link);
+                const text_link_formatted = capitalizeFirstLetter(textLink);
 
                 return (
                     <div className="ServiceSection__Card" key={index}>

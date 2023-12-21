@@ -9,7 +9,7 @@ interface Props {
     id: number
 }
 
-
+//Todo: Find Solution for exposing data in GraphQl
 const ServicePage = async ({ id }: Props) => {
     const servicesData = await fetchServicesData(id)
     const acfData = servicesData.acf.service

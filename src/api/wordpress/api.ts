@@ -66,10 +66,7 @@ export const fetchNavigationData = cache(async () => {
     return fetchGraphQLData(query);
 });
 
-
-
-
-export const fetchHomePageData = cache(async (uri: string) => {
+export const fetchHomePageData = cache(async () => {
 
     const query = `query HomePageData {
         pageBy(uri: "hem") {
@@ -167,6 +164,56 @@ export const fetchHomePageData = cache(async (uri: string) => {
     return fetchGraphQLData(query);
 })
 
+export const fetchCareerPageData = cache(async () => {
+
+  const query = `query CareerPageData {
+    pageBy(uri: "karriar") {
+      id
+      career {
+        career {
+          text
+          title
+          image {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }`;
+
+  return fetchGraphQLData(query);
+})
+
+export const fetchAboutPageData = cache(async () => {
+  const query = `query AboutPageData {
+  pageBy(uri: "om-oss") {
+    id
+    about {
+      about {
+        description
+        fieldGroupName
+        title
+        image1 {
+          sourceUrl
+        }
+        image2 {
+          sourceUrl
+        }
+        image3 {
+          sourceUrl
+        }
+        image4 {
+          sourceUrl
+        }
+      }
+    }
+  }
+}`;
+
+  return fetchGraphQLData(query);
+})
+
+
 
 
 export const fetchPageData = cache(async (id: number) => {
@@ -183,51 +230,42 @@ export const fetchPageData = cache(async (id: number) => {
 
 })
 
-export const fetchServiceData = cache(async () => {
-    const res = await fetch(`${BASE_URL}/service`)
-
-    if (!res.ok) {
-        throw new Error('Failed to fetch data')
-    }
-
-    return res.json()
-
-})
-
-// export const fetchNavigationData = cache(async () => {
-//     const res = await fetch(`${BASE_URL}/navigation`)
-
-//     if (!res.ok) {
-//         throw new Error('Failed to fetch data')
-//     }
-
-//     return res.json()
-// })
-
+//Todo:  Figure out a way to fetch Custom Post types via graphQL
 export const fetchServicesData = cache(async (id: number) => {
-    const res = await fetch(`${BASE_URL}/service/${id}`)
+  const res = await fetch(`${BASE_URL}/service/${id}`)
 
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
 
-    return res.json()
+  return res.json()
+})
+
+export const fetchServiceData = cache(async () => {
+  const res = await fetch(`${BASE_URL}/service`)
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+
 })
 
 
-export const fetchProjectsData = cache(async (id: number | string) => {
-    try {
-        const res = await fetch(`${BASE_URL}/project/${id}`);
 
-        if (!res.ok) {
-            throw new Error(`Failed to fetch data: ${res.status} ${res.statusText}`);
-        }
+export const fetchProjectsData = cache(async () => {
+  try {
+    const res = await fetch(`${BASE_URL}/project/`);
 
-        return res.json();
-    } catch (error) {
-        console.error("Error fetching project data:", error);
-        // You can also rethrow the error if you want to handle it further up the call stack
-        // throw error;
+    if (!res.ok) {
+      throw new Error(`Failed to fetch data: ${res.status} ${res.statusText}`);
     }
-});
 
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching project data:", error);
+    // You can also rethrow the error if you want to handle it further up the call stack
+    // throw error;
+  }
+});
