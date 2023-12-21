@@ -1,4 +1,4 @@
-import ProjectPage from '@/components/ProjectPage/ProjectPage'
+import ProjectPage from '@/components/project-page/ProjectPage'
 import React from 'react'
 
 

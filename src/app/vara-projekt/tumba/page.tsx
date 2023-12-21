@@ -1,4 +1,4 @@
-import ComingSoon from '@/components/ComingSoon/ComingSoon'
+import ComingSoon from '@/components/coming-soon/ComingSoon'
 import React from 'react'
 
 import Title from '@/components/Title/Title'

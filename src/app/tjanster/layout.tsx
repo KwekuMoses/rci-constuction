@@ -1,4 +1,4 @@
-import ContactSection from "@/components/ContactSection/ContactSection";
+import ContactSection from "@/components/contact-section/ContactSection";
 
 
 

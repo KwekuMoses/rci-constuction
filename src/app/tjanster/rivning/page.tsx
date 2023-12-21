@@ -1,4 +1,4 @@
-import ServicePage from '@/components/ServicePage/ServicePage'
+import ServicePage from '@/components/service-page/ServicePage'
 import React from 'react'
 
 

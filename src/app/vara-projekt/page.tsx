@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Title from '@/components/Title/Title';
 import Link from 'next/link';
-import { fetchProjectsData } from '@/utils/fetchData';
+import { fetchProjectsData } from '@/api/api';
 import './style.scss';
 
 interface Project {

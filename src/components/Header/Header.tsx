@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import './Header.scss';
-import Navigation from '../Navigation/Navigation';
-import Button from '../CtaButton/CtaButton';
-import Logo from '../Logo/Logo';
+import Navigation from '../navigation/Navigation';
+import Button from '../cta-button/CtaButton';
+import Logo from '../logo/Logo';
 
 import useMakeHeaderSticky from '@/utils/stickyHeader';
 
