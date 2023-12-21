@@ -1,4 +1,4 @@
-import Hero from '../components/Hero/Hero'
+import Hero from '../components/hero/Hero'
 import Introduction from '../components/introduction/Introduction'
 import ServicesSection from '../components/service-section/ServicesSection'
 import CustomerQuote from '../components/customer-quote/CustomerQuote'
