@@ -1,6 +1,6 @@
 import React from 'react'
 import './CtaButton.scss'
-import { dm_sans_buttons } from '../../Styles/fonts';
+import { dm_sans_buttons } from '../../styles/fonts';
 
 import Link from 'next/link'
 

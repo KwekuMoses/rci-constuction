@@ -1,8 +1,8 @@
 import React from 'react'
 import './HeroText.scss';
 
-import { dm_sans_bold } from '@/Styles/fonts';
-import { dm_sans_thin } from '@/Styles/fonts';
+import { dm_sans_bold } from '@/styles/fonts';
+import { dm_sans_thin } from '@/styles/fonts';
 
 
 interface Props {

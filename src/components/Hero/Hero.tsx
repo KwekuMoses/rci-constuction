@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import HeroText from './HeroText/HeroText';
 
-import { poppins } from '../../Styles/fonts';
+import { poppins } from '../../styles/fonts';
 
 import './Hero.scss';
 
