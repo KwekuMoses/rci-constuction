@@ -13,7 +13,7 @@ const iconMapping: { [key in IconName]: IconDefinition } = {
     'fa-users-line': faUsersLine,
 };
 
-interface Props {
+export interface Props {
     title: string | null;
     text: string | null;
     icon: string | boolean;
@@ -45,3 +45,5 @@ const BookingCard = ({ title, text, icon }: Props) => {
 }
 
 export default BookingCard;
+
+
