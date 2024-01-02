@@ -23,11 +23,11 @@ const CookieConsent = () => {
         <div className="Cookiebanner">
             <div className="Cookiebanner__Content">
                 <span className="Cookiebanner__Text">
-                    This website uses cookies to improve user experience.
-                    <br />By using our website you consent to all cookies in accordance with our Cookie Policy.
+                    Denna webbplats använder cookies för att förbättra användarupplevelsen.
+                    <br />Genom att använda vår webbplats godkänner du alla cookies i enlighet med vår Cookiepolicy.
                 </span>
                 <button className="Cookiebanner__Button" onClick={() => acceptCookie()}>
-                    Accept
+                    Acceptera
                 </button>
             </div>
         </div>
