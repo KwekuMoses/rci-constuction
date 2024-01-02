@@ -9,8 +9,8 @@ import CookieConsent from '@/components/cookie-consent/CookieConsent'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'RCI Construction AB',
-  description: 'RCI Construction AB is a next-gen application offering comprehensive solutions for construction management.',
+  title: 'RCI Bygg AB',
+  description: 'RCI BYGG AB - Vi utför professionella och effektiva lösningar inom håltagning, sågning och rivning.',
 }
 
 export default async function RootLayout({
