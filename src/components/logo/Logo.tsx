@@ -3,9 +3,7 @@ import './Logo.scss'
 
 const Logo = () => {
     return (
-        <div className="Logo">
-            TEST
-            RCI BYGG</div>
+        <div className="Logo">RCI BYGG</div>
     )
 }
 
